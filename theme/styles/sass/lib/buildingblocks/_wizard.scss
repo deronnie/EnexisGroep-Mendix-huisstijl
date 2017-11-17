@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Wizard 
+
+   Styling for Wizard (Steps/Numbers)
+========================================================================== */
+.wizard {
+	position: relative;
+	margin: auto;
+	// .row:before {
+	// 	left: 0;
+	// 	top: 30px;
+	// 	bottom: 0;
+	// 	position: absolute;
+	// 	content: " ";
+	// 	width: 100%;
+	// 	height: 5px;
+	// 	background-color: $gray-light;
+	// }
+	.row {
+		position: relative;
+		width: 100%;
+		display: table;
+		margin: auto;
+	}
+}
+.wizard-step {
+	text-align: center;
+	display: table-cell;
+    vertical-align: middle;
+    float: none;
+    padding-top: 50px;
+	.wizard-step-number {
+		@include font(bold);
+		z-index: 1;
+		position:absolute;
+		border-radius: 50%;
+		font-size: 18px;
+		width: 50px;
+		height: 50px;
+		margin: -50px 0 0 -25px;
+		color: $color-text-black;
+		border: 2px solid $gray;
+		background-color: $gray;
+
+		// Labels and buttons
+		line-height: 50px;
+		padding: 0;
+	}
+	.wizard-step-title {
+		display: block;
+	}
+	.wizard-step-title:before {
+		left: 0;
+		top: 25px;
+		bottom: 0;
+		position: absolute;
+		content: " ";
+		width: 100%;
+		height: 5px;
+		z-index: 0;
+		background-color: $gray;
+	}
+}
+.card .card .wizard-step-title:before {
+	background-color: $color-layout-bg-white;
+}
+
+.wizard-step-number-active {
+	.wizard-step-number.btn-default {
+		color: $color-text-white;
+		border-color: $color-primary;
+		background-color: $color-primary;
+	}
+	.wizard-step-title:before {
+		background-color: $color-primary !important;
+	}
+}
+
+.wizard-step-number-visited {
+	.wizard-step-number.btn-default {
+		color: $color-text-white;
+		border-color: $color-default;	
+		background-color: $color-default;
+	}
+	.wizard-step-title {
+		&:before {
+			background-color: $color-default !important;
+		}
+		&:after {
+			font-family: FontAwesome;
+		    content: "\f00c";
+		    color: $color-success;
+		    margin-left: $spacing-number;
+		}
+	}
+}
+
+
+.profile-phone .wizard {
+	.row:before {
+		top: ($spacing-number * 2);
+	}
+	.wizard-step-number {
+		width: 50px;
+		height: 50px;
+		font-size: ($spacing-number * 2);
+		line-height: 50px;
+		
+	}
+}
+
+
+/* ==========================================================================
+   Wizard Progress
+
+   Styling for Wizard (Progress Steps)
+========================================================================== */
+
+.wizard-progress2 {
+	.wizard-progress-step {
+	    width: calc(50% - 6px);
+	}
+}
+.wizard-progress3 {
+	.wizard-progress-step {
+	    width: calc(33.3333% - 5px);
+	}
+}
+.wizard-progress4 {
+	.wizard-progress-step {
+	    width: calc(25% - 5px);
+	}
+}
+.wizard-progress5 {
+	.wizard-progress-step {
+    	width: calc(20% - 4.8px);
+	}
+}
+.wizard-progress6 {
+	.wizard-progress-step {
+	    width: calc(16.6666% - 4.8px);
+	}
+}
+.wizard-progress-step {
+	margin: 0 0 0 $spacing-number;
+    padding: $spacing-number ($spacing-number * 2) $spacing-number ($spacing-number * 3);
+    position: relative;
+    background: $gray;
+    @include font(bold);
+	&:after, 
+	&:before {
+		position: absolute;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-color: transparent;
+        content: " ";
+        pointer-events: none;
+		left: 100%;
+	}
+	&:before {
+	    top: 50%;
+	    z-index:1;
+        margin-left: 4px;
+	    margin-top: -15px;
+	    border-width: 15px 8px;
+	    border-left-color: $color-layout-bg-white;
+	}
+	&:after {
+	    top: 50%;
+	    z-index:2;
+        margin-top: -15px;
+    	border-width: 15px 8px;
+	    border-left-color: $gray;
+	}
+
+	.wizard-progress-number {
+		display: inline-block;
+	    padding: 1px $spacing-number;
+	    color: $color-default;
+	    text-align: center;
+	    white-space: nowrap;
+	    vertical-align: middle;
+	    margin-right: $spacing-number;
+	    border-radius: 10px;
+	    font-size: 20px;
+	}
+
+	.wizard-progress-title {
+		color: $color-default;
+	}
+}
+
+.wizard-progress-step:nth-child(n+2) {
+	.wizard-progress-number {
+		margin-left: 12px;
+	}
+}
+
+.wizard-progress-step-visited {
+	background-color: $color-default;
+	&:after {
+		border-left-color: $color-default;
+	}
+
+	.wizard-progress-number {
+	    color: $color-text-white;
+	    background-color: $color-default;
+	}
+	.wizard-progress-title {
+		color: $color-text-white;
+		&:after {
+			font-family: FontAwesome;
+		    content: "\f00c";
+		    color: $color-success;
+		    margin-left: $spacing-number;
+		}
+	}
+}
+.wizard-progress-step-active {
+	background-color: $color-primary;
+	&:after {
+		border-left-color: $color-primary;
+	}
+
+	.wizard-progress-number {
+	    color: $color-text-white;
+	    background-color: $color-primary;
+	}
+	.wizard-progress-title {
+		color: $color-text-white;
+	}
+}
+
+.wizard-progress-step-last {
+	&:after, 
+	&:before {
+		display:none;
+		visibility: hidden;
+	}
+}
+
+.wizard-step-content {
+	padding: ($spacing-number * 2);
+    border: 1px solid $gray;
+    border-top: 0;
+    margin-bottom: ($spacing-number * 2);
+    .btn {
+    	margin-bottom: 0;
+    }
+}
+.card .card {
+	.wizard-progress {
+		background-color: $color-layout-bg-secondary;
+	}
+	.wizard-step-content {
+    	border-color: $color-layout-bg-white;
+	    .btn {
+	    	background-color: $color-layout-bg-white;
+	    }  
+	    .btn-primary {
+	    	background-color: $color-primary;
+	    	&:hover {
+	    		background-color: $color-default;
+	    	}
+	    } 	
+	}
+	.wizard-progress-step {
+		background-color: $color-layout-bg-white;
+		&:before {
+		    border-left-color: $gray;
+		}
+		&:after {
+		    border-left-color: $color-layout-bg-white;
+		}
+	}
+	.wizard-progress-step-visited {
+		background-color: $color-default;
+		&:after {
+		    border-left-color: $color-default;
+		}
+	}
+	.wizard-progress-step-active {
+		background-color: $color-primary;
+		&:after {
+		    border-left-color: $color-primary;
+		}
+	}
+	
+	.wizard-progress-step-last {
+		background-color: $color-layout-bg-white;
+    }
+}
+
+
+.profile-tablet {
+	.wizard-progress-step:before {
+		margin-top: -20px;
+    	border-width: 20px 14px;
+	}
+	.wizard-progress-step:after {
+	    margin-top: -19px;
+	    border-width: 19px 14px;
+	}
+	.wizard-progress-step .wizard-progress-number {
+		margin-right:2px;
+	}
+	.wizard-progress-step:nth-child(n+2) .wizard-progress-number {
+		margin-left: 4px;
+	}
+}
+
+
+.profile-phone {
+	.wizard-progress2,
+	.wizard-progress3,
+	.wizard-progress4,
+	.wizard-progress5,
+	.wizard-progress6 {
+		.wizard-progress-step {
+	        width: calc(100% - 16px);
+	        border-bottom: 2px solid #fff;
+		}
+		.wizard-progress-step:after {
+		    border-top-color: #EBEBEB;
+		    border-left-color: transparent;
+		    bottom: -25px;
+		    border-width: 14px 22px;
+		    top: inherit;
+		    left: 75%;
+		}
+		.wizard-progress-step:before {
+		    top: inherit;
+		    z-index: 1;
+		    left: 75%;
+		    margin-top: auto;
+		    bottom: -26px;
+		    border-width: 12px 14px;
+		    border-left-color: transparent;
+		    border-top-color: #fff;
+		}
+		.wizard-progress-step-visited {
+	        border-bottom: 0;
+		}
+		.wizard-progress-step-visited:after {
+		    border-top-color: #222B53;
+		    border-left-color: transparent;
+		    bottom: -25px;
+		    border-width: 14px 22px;
+		    top: inherit;
+		    left: 75%;
+		}
+		.wizard-progress-step-visited:before {
+		    border: 0;
+		}
+		.wizard-progress-step-active {
+	        border-bottom: 0;
+		}
+		.wizard-progress-step-active:after {
+		    border-top-color: #D8127D;
+		    border-left-color: transparent;
+		    bottom: -25px;
+		    border-width: 14px 22px;
+		    top: inherit;
+		    left: 75%;
+		}
+		.wizard-progress-step-active:before {
+		    border: 0;
+		}
+		.wizard-progress-step:nth-child(n+2) .wizard-progress-number {
+			margin-left: 0;
+		}
+	}
+}

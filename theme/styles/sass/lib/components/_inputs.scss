@@ -1,0 +1,535 @@
+/* ==========================================================================
+   Inputs 
+========================================================================== */
+.form-control {
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+	box-shadow:	none;
+	display: block;
+	padding: $spacing-number;
+	width: calc(100% - 1px);
+	height: $input-height;
+	border: 1px solid $color-input-border;
+	background-color: $color-input-bg;
+	background-image: none;
+	color: $color-input-text;
+	vertical-align: middle;
+	border-radius: 0;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	&:focus {
+		border-color: $color-input-border-focus;
+		background-color: $color-input-bg-focus;
+		outline: 0;
+		color: $color-input-text-focus;
+		box-shadow: none;
+	}
+}
+.mx-textarea {
+
+}
+textarea.form-control {
+	height: auto;
+}
+.form-control-static {
+	overflow:  hidden;
+	min-height: ($spacing-number * 2);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: ($spacing-number * 2);
+	margin-bottom: 0;
+}
+/* Not editable textarea, textarea will be rendered as a label */
+.mx-textarea label {
+	height: auto;
+}
+/* Input and textarea get properly aligned */
+.form-group div[class*='textBox'] > label,
+.form-group div[class*='textArea'] > label,
+.form-group div[class*='datePicker'] > label {
+	@extend .form-control-static;
+}
+.mx-dateinput {
+	z-index: 1;
+	.mx-dateinput-select-button {
+		@extend .btn-primary;
+		background-color: $color-btn-bg-primary !important;
+		margin: 0 0 0 -2px !important;
+		z-index: 2;
+		height: 36px;
+		width: 36px;
+		line-height: 31px;
+		min-width: 36px;
+		&:hover,
+		&:active {
+			background-color: $color-default !important;
+		}
+		.glyphicon {
+			top: 0;
+		}
+	}
+}
+.profile-phone,
+.profile-tablet {
+	.mx-dateinput-input {
+		line-height: 40px !important;
+		vertical-align: middle;
+	}
+}
+
+.mx-referencesetselector-input-wrapper .form-control {
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Inputs Readonly
+========================================================================== */
+.readonly-input {
+	@extend .form-control;
+	height: auto;
+	min-height: ($spacing-number * 4);
+	background-color: $color-input-bg-disabled !important;
+	label { 
+		padding: 0 !important;
+	}
+	textarea {
+		display: none;
+	}
+}
+.readonly-input-alert label {
+	color: $color-danger;
+}
+/* Needed for IE8, IE8 doesn't respect border-box and min-height */
+.dj_ie8 .readonly-input {
+	min-height: auto;
+}
+
+.form-horizontal .form-group {
+	margin: 0;
+}
+
+/* ==========================================================================
+   AUTOCOMPLETE FOR MENDIX
+========================================================================== */
+.select2-dropdown {
+  border-radius: 0;
+}
+.select2-container--default .select2-selection--single,
+.select2-search--dropdown .select2-search__field {
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  box-shadow: none;
+  display: block;
+  padding: $spacing-number;
+  width: calc(100% - 1px);
+  height: $input-height;
+  border: 1px solid $color-input-border;
+  background-color: $color-layout-bg-white;
+  background-image: none;
+  color: $color-input-text;
+  vertical-align: middle;
+  border-radius: 0;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+.select2-container--default .select2-selection--single:focus {
+  outline: none;
+}
+.select2-search--dropdown .select2-search__field.mx-focus {
+  border-color: $color-input-border-focus;
+  background-color: $color-layout-bg-white;
+  outline: 0;
+  color: $color-input-text-focus;
+  box-shadow: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 26px;
+  color: $color-text-black;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 4px;
+  right: 4px;
+}
+
+.profile-phone,
+.profile-tablet {
+	.select2-container--default .select2-selection--single,
+	.select2-search--dropdown .select2-search__field {
+	  height: 44px;
+	  font-size: $m-font-size-base;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+	  line-height: 27px;
+	}
+}
+
+/* ==========================================================================
+   Inputs File Upload
+========================================================================== */
+.mx-fileinput {
+	.mx-wrapped-label {
+		display: inline-block;
+		width: 200px;
+	}
+	/* File input widget hover fix */
+	.mx-wrapped-form {
+		.mx-wrapped-input {
+			cursor: pointer;
+		}
+		.mx-fileinput-upload-button:hover {
+			background-color: $color-btn-bg-default;
+		}
+	}
+}
+
+/* ==========================================================================
+   Mobile Friendly Radio's and checkers
+   ========================================================================== */
+.form-horizontal { 
+	.radio-inline {
+		padding-left: 25px;
+		line-height: 32px;
+		padding-top: 13px;
+
+		input[type=radio] {
+		    margin-top: 5px;
+		}
+	}
+	input[type=checkbox] {
+	    margin-top: 9px;
+	}
+	.control-label {
+    	height: $input-height;
+	    display: flex;
+	    align-items: center;
+	}
+}
+
+input[type=checkbox], 
+input[type=radio] {
+	min-width: 18px;
+	min-height: 18px;
+	margin: 0;
+	cursor: pointer;
+}
+.checkbox label, .radio label {
+	margin: $spacing-number 0;
+}
+
+.radio-inline {
+	margin-top: 4px;
+}
+.radio-inline+.radio-inline {
+	margin-left: 16px;
+	margin-top: 4px;
+}
+.radio-inline input[type=radio] {
+	margin-left: -20px;
+}
+.profile-phone {
+	.radio-inline input[type=radio] {
+		margin-left: -20px;
+		margin-top: 0;
+	}
+}
+
+/* ==========================================================================
+   Mobile Friendly Radio's and checkers
+
+   mobileRadio
+   ========================================================================== */
+.mobileRadio label.radio-inline {
+	z-index: 9;
+	margin-left: 0;
+ 	@include font(bold);
+	line-height: 44px;
+	text-transform: uppercase;
+	color: $color-text-white;
+	padding: 0 16px;
+	border-left: 1px solid $color-text-black;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.50);
+	&:focus {
+    	outline: 0;
+    }
+    &:first-child {
+		border-left: 0;
+	    input {
+	    	margin-left: -15px;
+	    }
+    }
+}
+
+.mobileRadio label.radio-inline:hover,
+.mobileRadio label.radio-inline:hover input,
+.mobileRadio .radio-inline:hover input:after {
+	background-color: $color-btn-bg-default;
+    color: $color-text-white;
+	outline: 0;
+}
+.mobileRadio .radio-inline input:checked,
+.mobileRadio .radio-inline:hover input:checked,
+.mobileRadio .radio-inline input:checked:after,
+.mobileRadio .radio-inline:hover input:checked:after {
+	background-color: $color-primary;
+	color: $color-text-white;
+	border-left: 0;
+	&:first-child {
+		border-left: 0;
+    }
+}
+.mobileRadio .radio-inline input {
+	background-color: $color-btn-bg-default;
+	cursor: pointer;
+	display: inline-block;
+	width: 100%;
+	height: 44px;
+	margin-top: 0;
+	margin-left: -16px;
+	-webkit-appearance: none;
+	border: none;
+	z-index: -1;
+	&:focus {
+    	outline: 0;
+    }
+}
+
+.mobileRadio .radio-inline input:after {
+	visibility: hidden;
+}
+
+/* Disabled mobileRadiobuttons */
+.form-disabled .mobileRadio p {
+	border: none;
+	background: rgba(95, 96, 95, 0.50) !important;
+	color: $color-text-white;
+	display: inline-block;
+	padding-bottom:0;
+	min-width: 44px;
+	width: auto;
+	@include font(bold);
+	margin-top: 0;
+	text-shadow: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+/* ==========================================================================
+   Mobile Friendly Radio's and checkers
+
+   Yes / No
+   ========================================================================== */
+.ynRadio label.radio-inline {
+    z-index: 9;
+    line-height: 44px;
+    @include font(bold);
+    color: $color-text-white;
+    margin: 2px 4px;
+    padding: 0 16px;
+    width: 58px;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.50);
+    &:focus {
+    	outline: 0;
+    }
+    &:hover {
+    	background-color: transparent;
+    }
+}
+.ynRadio label.radio-inline:first-child {
+    margin-left: 0;
+    text-align: center;
+    input {
+    	margin-left: -22px;
+    }
+    input:checked,
+	input:checked:after {
+		background: $color-success;
+	    border-bottom: 0;
+	    outline: 0;
+	}
+}
+.ynRadio label.radio-inline:last-child {
+    margin-right: 0;
+    input:checked,
+	input:checked:after {
+		background: $color-danger;
+	    border-bottom: 0;
+	    outline: 0;
+	}
+}
+
+.ynRadio .radio-inline input {
+	background-color: #CCCCCC;
+	cursor: pointer;
+	display: inline-block;
+	height: 44px;
+	width: 100%;
+	margin-top: 0;
+    margin-left: -16px;
+	-webkit-appearance: none;
+	z-index: -1;
+	&:focus {
+    	outline: 0;
+    }
+}
+.ynRadio label.radio-inline:hover input,
+.ynRadio .radio-inline:hover input:after {
+	background-color: $color-btn-bg-default;
+    border-color: $color-btn-border-default;
+    color: $color-text-white;
+}
+
+.ynRadio .radio-inline input:after {
+	visibility: hidden;
+}
+
+/* Disabled JaNeeRadio button */
+.form-disabled .ynRadio p {
+	min-width: 44px;
+	width: auto;
+	padding-bottom: 0;
+	@include font(bold);
+	display: inline-block;
+	text-transform: uppercase;
+	border: 0;
+	background: rgba(95, 96, 95, 0.50) !important;
+	color: $color-text-white;
+	text-shadow: none;
+	text-align: center;
+}
+
+/* ==========================================================================
+   Mobile Friendly Radio's and checkers
+
+   Boolean slider
+   ========================================================================== */
+.wgt-BooleanSlider {
+	margin-bottom: 8px;
+}
+.mobileCheckbox .mx-text {
+	color: $color-default;
+}
+.wgt-BooleanSlider_control.form-control.btn-default {
+	margin: 0;
+	height: 31px;
+    color: $color-btn-text-default;
+    background-color: $color-layout-bg-white;
+    border-color: $color-layout-bg-white;
+	&:hover,
+	&:active {
+	    background-color: $color-primary;
+    	border-color:  $color-primary;
+	}
+}
+.wgt-BooleanSlider_control.form-control.btn-primary {
+    color: $color-text-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    margin: 0;
+	height: 31px;
+	&:hover,
+	&:active {
+	    background-color: $color-default;
+    	border-color:  $color-default;
+    	color: $color-text-white;
+	}
+}
+.btn-default .wgt-BooleanSlider__toggle:before {
+	background-color: $color-layout-bg-white;
+}
+.btn-primary .wgt-BooleanSlider__toggle:before {
+	background-color: $color-btn-bg-white;
+}
+.wgt-BooleanSlider__input {
+	cursor: pointer;
+}
+.wgt-BooleanSlider__toggle {
+	line-height: 26px;
+}
+.wgt-BooleanSlider__toggle:before {
+    height: 75%;
+    left: 3px;
+    top: 4px;
+}
+
+.wgt-BooleanSlider__togglefalse {
+	margin-left: 7px;
+}
+
+.card .wgt-BooleanSlider_control.form-control.btn-default  {
+	margin: 0;
+	height: 31px;
+    background-color: $color-btn-bg-default;
+	border-color:  $color-btn-bg-default;
+	color: $color-btn-text-default;
+	&:hover,
+	&:active {
+	    background-color: $color-primary;
+    	border-color:  $color-primary;
+    	color: $color-text-white;
+	}
+}
+.card .btn-default .wgt-BooleanSlider__toggle:before {
+	background-color: $color-layout-bg-white;
+}
+
+.card .card .wgt-BooleanSlider_control.form-control.btn-default  {
+	margin: 0;
+	height: 31px;
+	color: $color-btn-text-default;
+    background-color: $color-layout-bg-white;
+    border-color: $color-layout-bg-white;
+	&:hover,
+	&:active {
+	    background-color: $color-primary;
+    	border-color:  $color-primary;
+    	color: $color-text-white;
+	}
+}
+.card .card .btn-default .wgt-BooleanSlider__toggle:before {
+	background-color: $color-btn-bg-default;
+}
+
+
+.sliderWhite .wgt-BooleanSlider_control.form-control.btn-default  {
+	color: $color-btn-text-default !important;
+    background-color: $color-layout-bg-white !important;
+    border-color: $color-layout-bg-white !important;
+	&:hover,
+	&:active {
+	    background-color: $color-primary;
+    	border-color:  $color-primary;
+    	color: $color-text-white;
+	}
+}
+.sliderWhite .wgt-BooleanSlider__toggle:before {
+	background-color: $color-btn-bg-default !important;
+}
+.sliderGray .wgt-BooleanSlider_control.form-control.btn-default  {
+    background-color: $color-btn-bg-default !important;
+	border-color:  $color-btn-bg-default !important;
+	color: $color-btn-text-default !important;
+	&:hover,
+	&:active {
+	    background-color: $color-primary;
+    	border-color:  $color-primary;
+    	color: $color-text-white;
+	}
+}
+.sliderGray .wgt-BooleanSlider__toggle:before {
+	background-color: $color-layout-bg-white !important;
+}
+
+.profile-phone,
+.profile-tablet {
+	.wgt-BooleanSlider__toggle {
+		line-height: 19px;
+	}
+	.wgt-BooleanSlider_control.form-control.btn {
+		height: 38px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.wgt-BooleanSlider__toggle:before {
+	    top: 5px;
+	}
+}

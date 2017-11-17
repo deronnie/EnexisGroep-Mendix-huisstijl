@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Dashboard Stats 
+
+   Used in dashboard
+========================================================================== */
+.dashboardstat {
+	margin: ($spacing-number * 4) 0;
+
+	@media (max-width: $screen-md) {
+		margin: $spacing-number 0;
+	} 
+
+	.dashboardstat-left,
+	.dashboardstat-right {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+.dashboardstat-icon {
+	font-size: 1.6em;
+	padding: $spacing-number ($spacing-number * 2);
+	margin: ($spacing-number / 2) $spacing-number 0 0;
+
+	@media (max-width: $screen-md) {
+		font-size: 1.111em;
+	}
+}
+.dashboardstat-title {
+	font-size: 1.111em;
+	color: $gray-light;
+	text-transform: uppercase;
+
+	@media (max-width: $screen-md) {
+		font-size: 1em;
+	}
+}
+.dashboardstat-number {
+	font-size: 4em;
+	line-height: 4.5em;
+	color: $color-text-black;
+
+	@media (max-width: $screen-md) {
+		font-size: 1.6em;
+	}
+}

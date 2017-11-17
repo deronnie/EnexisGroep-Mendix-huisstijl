@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Grid 
+
+   Default Mendix Grid
+========================================================================== */
+.mx-grid {
+	border-radius: 0;
+	padding: 0px;
+	border: 0;
+
+	.mx-grid-controlbar {
+		margin: ($spacing-number / 2) 0;
+		/* Paging */
+		.mx-grid-pagingbar {
+			margin-left: 0;
+			margin-top: 6px;
+			/* Buttons */
+			.mx-button {
+				padding: 0;
+			    min-width: 36px;
+				background-color: $color-grid-paging-bg !important;
+				color: $color-grid-paging-text;
+				border-color: $color-grid-paging-border;
+				margin: 0 2px; 
+
+				&:hover {
+					background-color: $color-grid-paging-bg-hover !important;
+					color: $color-grid-paging-text-hover;
+					border-color: $color-grid-paging-border-hover;
+				}
+
+				&.disabled, 
+				&[disabled] {
+					color: #ccc;
+				}
+			}
+
+			/* Text Paging .. to .. to .. */
+			.mx-grid-paging-status {
+				padding: 2px $spacing-number 1px $spacing-number;
+			}
+		}
+	}
+
+	.mx-grid-searchbar {
+		padding: $spacing-number 0;
+		background-color: $color-layout-bg-secondary;
+		.mx-grid-search-item {
+			    display: 		 inline-flex;
+			    display: -webkit-inline-flex;
+			    margin: ($spacing-number / 2) 0;
+			    align-items: center;
+			.mx-grid-search-label {
+				vertical-align: middle;
+				label { 
+					padding-top: ($spacing-number / 2); 
+					line-height: 15px;
+				}
+			}
+			.mx-grid-search-input {
+				padding: 0;
+				width: 167px;
+				.form-control {
+					height: 32px;
+					overflow:hidden;
+				}
+				select.form-control {
+					vertical-align: middle;
+					padding: ($spacing-number / 2);
+				}
+				.mx-button {
+					height: 32px;
+					padding-top: ($spacing-number / 2);
+					padding-bottom: ($spacing-number / 2);
+				}
+				.mx-dateinput-select-button {
+					margin-top: 0 !important;
+				}
+			}
+		}
+		.mx-button {
+  			background-color: $color-btn-bg-white;
+  			height: 32px;
+  			line-height: 28px;
+  			margin:($spacing-number / 2);
+  			&:hover,
+  			&:active {
+  				background-color: $color-btn-bg-primary;
+  				color: $color-text-white !important;
+  			}
+  		}
+  		.mx-grid-search-button {
+  			background-color: $color-btn-bg-primary;
+  			float: right;
+  			color: $color-text-white;
+  			margin-right: ($spacing-number * 2);
+  			&:hover,
+  			&:active {
+  				background-color: $color-btn-bg-inverse;
+  				margin-right: ($spacing-number * 2);
+  			}
+  		}
+	}
+}
+.mx-referenceselector-select-button {
+	margin-top: 0;
+	background-color: $color-btn-bg-primary;
+	color: $color-btn-text-primary;
+	&:focus {
+		margin-top: 0;
+		background-color: $color-btn-bg-primary;
+		color: $color-btn-text-primary;
+	}
+}
+
+/* Remove default border from grid inside a Mendix Dataview */
+.mx-dataview .mx-grid {
+	border: 0;
+}
+
+.card {
+	.mx-grid-searchbar {
+		background-color: $color-layout-bg-secondary;
+		.mx-button {
+  			background-color: $color-btn-bg-white;
+  			&:hover,
+  			&:active {
+  				background-color: $color-btn-bg-primary;
+  				color: $color-text-white !important;
+  			}
+  		}
+  		.mx-grid-search-button {
+  			background-color: $color-btn-bg-primary;
+  			color: $color-text-white;
+  			&:hover,
+  			&:active {
+  				background-color: $color-default;
+  			}
+  		}
+	}
+	.mx-tabcontainer-content .mx-grid-controlbar .btn-default {
+	    border-color: $color-layout-bg-white;
+	    background-color: $color-layout-bg-white;
+	    &:hover,
+		&:active {
+			background-color: $color-btn-bg-primary;
+			border-color: $color-btn-bg-primary;
+		}
+	}
+	.card {
+		.mx-grid-searchbar {
+			background-color: $color-layout-bg-white;
+			.mx-button {
+	  			background-color: $color-btn-bg-default;
+	  			&:hover,
+	  			&:active {
+	  				background-color: $color-btn-bg-primary;
+	  				color: $color-text-white !important;
+	  			}
+	  		}
+	  		.mx-grid-search-button {
+	  			background-color: $color-btn-bg-primary;
+	  			color: $color-text-white;
+	  			&:hover,
+	  			&:active {
+	  				background-color: $color-default;
+	  			}
+	  		}
+		}
+		.mx-tabcontainer-content .mx-grid-controlbar .btn-default {
+		    border-color: $color-layout-bg-white;
+		    background-color: $color-layout-bg-white;
+		    &:hover,
+			&:active {
+				background-color: $color-btn-bg-primary;
+				border-color: $color-btn-bg-primary;
+			}
+		}
+	}
+}
+
+.mx-tabcontainer .card .mx-grid {
+	.btn-default {
+	    border-color: $color-layout-bg-white;
+	    background-color: $color-layout-bg-white;
+	    &:hover,
+		&:active {
+			background-color: $color-btn-bg-inverse;
+			border-color: $color-btn-bg-inverse;
+		}
+	}
+	.mx-grid-searchbar {
+		background-color: $color-layout-bg-white;
+		.mx-button {
+  			background-color: $color-btn-bg-default;
+  			&:hover,
+  			&:active {
+  				background-color: $color-btn-bg-primary;
+  				color: $color-text-white !important;
+  			}
+  		}
+  		.mx-grid-search-button {
+  			background-color: $color-btn-bg-primary;
+  			color: $color-text-white;
+  			&:hover,
+  			&:active {
+  				background-color: $color-default;
+  			}
+  		}
+	}
+}
+
+.profile-phone,
+.profile-tablet {
+	.mx-grid {
+		.mx-grid-controlbar {
+			margin: $spacing-number 0;
+			.mx-button {
+				margin-bottom: 0;
+			}
+			/* Paging */
+			.mx-grid-pagingbar {
+				width: 100%;
+				/* Buttons */
+				.mx-button {
+					padding: 0;
+					min-width:12%;
+	    			height: 44px;
+					&:hover {
+						background-color: $color-grid-paging-bg-hover;
+						color: $color-grid-paging-text-hover;
+						border-color: $color-grid-paging-border-hover;
+					}
+					&.disabled, 
+					&[disabled] {
+						color: $gray;
+					}
+				}
+				/* Text Paging .. to .. to .. */
+				.mx-grid-paging-status {
+					padding: 0;
+					width: 42%;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+// .mx-grid .mx-grid-controlbar .mx-grid-pagingbar .mx-grid-paging-status {
+// 	font-size: 14px;
+// 	padding: 0;
+//     line-height: 33px;
+//     margin-left: -20px;
+// }

@@ -1,0 +1,578 @@
+/* ==========================================================================
+   Regions
+ 
+   Used for navigation layouts
+========================================================================== */
+
+.region-topbar {
+	height: $minimalheight-topbar;
+	background-color: $color-navtopbar-bg;
+	> .mx-layoutcontainer-wrapper {
+		padding: 0;
+	} 
+	
+	// SSO widgets
+	.navbar-right {
+		height: $minimalheight-topbar;
+		.mx-appswitcher-button-placeholder,
+		.mx-profilemenu-button-placeholder  {
+			display: inline-block;
+			border-left: 1px solid $color-border-default;
+			width: $minimalheight-topbar;
+			height: $minimalheight-topbar;
+			position: relative;
+			float: left;
+			iframe {
+				width: ($spacing-number * 6);
+				height: ($spacing-number * 6);
+
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto auto;
+			}
+		
+		}
+		.mx-profilemenu-button-placeholder {
+			margin-right: $spacing-number;
+		}
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+
+.region-sidebar,
+.region-sidebar-fixed {
+	background-color: $color-navsidebar-bg;
+	> .mx-layoutcontainer-wrapper {
+		padding: 0;
+	}
+}
+.region-content {
+	padding: 0; // for if region-content is on a col so you dont get scollbar
+	> .mx-layoutcontainer-wrapper {
+		padding: 0;
+	}
+	> .mx-placeholder,
+	> .mx-layoutcontainer-wrapper .mx-placeholder {
+		
+		// Fake orginal container styling on the first container on the page
+		.mx-layoutgrid-fixed {
+			max-width: 1170px;
+			margin: auto
+		}
+	}
+}
+.region-footer {
+	> .mx-layoutcontainer-wrapper {
+		padding: 0;
+	}
+}
+.mx-scrollcontainer-slide>.mx-scrollcontainer-toggleable>.mx-scrollcontainer-wrapper {
+	z-index: 999999;
+}
+.layout-sidebar-responsive {
+	.region-sidebar-fixed {
+		display: none;
+		@extend .region-sidebar;
+		@media (min-width: 768px) {
+		  position: fixed;
+		  z-index: 10;
+		  display: block;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+		  height: 100%;
+		  padding: 0;
+		}
+	}
+	.mx-scrollcontainer-open {
+		@media (min-width: 768px) {
+			left: -200px !important;
+		}
+	}
+}
+body[dir="rtl"] .layout-sidebar-responsive .region-sidebar-fixed {
+	@media (min-width: 768px) {
+	  right: 0;
+	}
+}
+body[dir="ltr"] .layout-sidebar-responsive .region-sidebar-fixed {
+	@media (min-width: 768px) {
+	  left: 0;
+	}
+}
+/* ==========================================================================
+   Navbar Brand
+
+   Used to style your app brand and logo
+========================================================================== */
+.navbar-brand {
+	display: block;
+	min-height: 64px;
+	float: left;
+	padding: ($spacing-number * 3) 0;
+	img {
+		height: 37px;
+		display: inline-block;
+	}
+	a {
+		color: $color-text-black;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/* ==========================================================================
+   Algemene styling elementen
+
+   Used to style your app a little better
+========================================================================== */
+// default $spacing-number gutter
+.row {
+  margin-right: -$spacing-number;
+  margin-left: -$spacing-number;
+}
+[class^="col-"],
+[class^=" col-"],
+[class*="col-"],
+[class*=" col-"] {
+  padding-right: $spacing-number;
+  padding-left: $spacing-number;
+}
+
+.th {
+	font-weight: bold;
+	background-color: $color-default;
+    color: $color-layout-bg-white;
+    border: 0;
+    font-size: 16px;
+    text-transform: lowercase;
+    padding: $spacing-number ($spacing-number * 2);
+}
+//****************************************************
+//  TEMPLATE PROJECT STYLING - COLOR CODE PAGE 
+//****************************************************
+.color-block {
+	height: 200px;
+	width: 100%;
+	display:block;
+} 
+.color-default {
+	background-color: $color-default;
+}
+.color-primary {
+	background-color: $color-primary;
+}
+.color-steun {
+	background-color: $color-steun;
+}
+.color-tekst {
+	background-color: $color-text-black;
+}
+.color-info {
+	background-color: $color-info;
+}
+.color-success {
+	background-color: $color-success;
+}
+.color-warning {
+	background-color: $color-warning;
+}
+.color-danger {
+	background-color: $color-danger;
+}
+.color-bg {
+	background-color: $color-layout-bg;
+}
+.color-white {
+	background-color: $color-layout-bg-white;
+	border: 1px solid black;
+}
+.color-bgSec {
+	background-color: $color-layout-bg-secondary;
+}
+//****************************************************
+//  END - TEMPLATE PROJECT STYLING - COLOR CODE PAGE 
+//****************************************************
+
+.summary {
+	@include font(bold);
+	font-size: $font-size-base;
+	color: $color-default;
+}
+
+.breakWord {
+	word-wrap: break-word;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+.card .no-padding {
+	padding: 0 !important;
+}
+.card .card .no-padding {
+	padding: 0 !important;
+}
+
+.noLeftPadding {
+	padding-left: 0;
+}
+.noRightPadding {
+	padding-right: 0;
+}
+
+// Allround paddings
+.padding-xs {
+	padding: ($spacing-number / 2) !important;
+}
+.padding-s {
+	padding: $spacing-number !important;
+}
+.padding-m {
+	padding: ($spacing-number * 2) !important;
+}
+.padding-l {
+	padding: ($spacing-number * 3) !important;
+}
+.padding-xl {
+	padding: ($spacing-number * 4) !important;
+}
+// Top paddings
+.padding-top-xs {
+	padding-top: ($spacing-number / 2) !important;
+}
+.padding-top-s {
+	padding-top: $spacing-number !important;
+}
+.padding-top-m {
+	padding-top: ($spacing-number * 2) !important;
+}
+.padding-top-l {
+	padding-top: ($spacing-number * 3) !important;
+}
+.padding-top-xl {
+	padding-top: ($spacing-number * 4) !important;
+}
+// Right paddings
+.padding-right-xs {
+	padding-right: ($spacing-number / 2) !important;
+}
+.padding-right-s {
+	padding-right: $spacing-number !important;
+}
+.padding-right-m {
+	padding-right: ($spacing-number * 2) !important;
+}
+.padding-right-l {
+	padding-right: ($spacing-number * 3) !important;
+}
+.padding-right-xl {
+	padding-right: ($spacing-number * 4) !important;
+}
+// Bottom paddings
+.padding-bottom-xs {
+	padding-bottom: ($spacing-number / 2) !important;
+}
+.padding-bottom-s {
+	padding-bottom: $spacing-number !important;
+}
+.padding-bottom-m {
+	padding-bottom: ($spacing-number * 2) !important;
+}
+.padding-bottom-l {
+	padding-bottom: ($spacing-number * 3) !important;
+}
+.padding-bottom-xl {
+	padding-bottom: ($spacing-number * 4) !important;
+}
+// Left paddings
+.padding-left-xs {
+	padding-left: ($spacing-number / 2) !important;
+}
+.padding-left-s {
+	padding-left: $spacing-number !important;
+}
+.padding-left-m {
+	padding-left: ($spacing-number * 2) !important;
+}
+.padding-left-l {
+	padding-left: ($spacing-number * 3) !important;
+}
+.padding-left-xl {
+	padding-left: ($spacing-number * 4) !important;
+}
+
+// Allround paddings
+.margin-xs {
+	margin: ($spacing-number / 2) !important;
+}
+.margin-s {
+	margin: $spacing-number !important;
+}
+.margin-m {
+	margin: ($spacing-number * 2) !important;
+}
+.margin-l {
+	margin: ($spacing-number * 3) !important;
+}
+.margin-xl {
+	margin: ($spacing-number * 4) !important;
+}
+// Top paddings
+.margin-top-xs {
+	margin-top: ($spacing-number / 2) !important;
+}
+.margin-top-s {
+	margin-top: $spacing-number !important;
+}
+.margin-top-m {
+	margin-top: ($spacing-number * 2) !important;
+}
+.margin-top-l {
+	margin-top: ($spacing-number * 3) !important;
+}
+.margin-top-xl {
+	margin-top: ($spacing-number * 4) !important;
+}
+// Right paddings
+.margin-right-xs {
+	margin-right: ($spacing-number / 2) !important;
+}
+.margin-right-s {
+	margin-right: $spacing-number !important;
+}
+.margin-right-m {
+	margin-right: ($spacing-number * 2) !important;
+}
+.margin-right-l {
+	margin-right: ($spacing-number * 3) !important;
+}
+.margin-right-xl {
+	margin-right: ($spacing-number * 4) !important;
+}
+// Bottom paddings
+.margin-bottom-xs {
+	margin-bottom: ($spacing-number / 2) !important;
+}
+.margin-bottom-s {
+	margin-bottom: $spacing-number !important;
+}
+.margin-bottom-m {
+	margin-bottom: ($spacing-number * 2) !important;
+}
+.margin-bottom-l {
+	margin-bottom: ($spacing-number * 3) !important;
+}
+.margin-bottom-xl {
+	margin-bottom: ($spacing-number * 4) !important;
+}
+// Left paddings
+.margin-left-xs {
+	margin-left: ($spacing-number / 2) !important;
+}
+.margin-left-s {
+	margin-left: $spacing-number !important;
+}
+.margin-left-m {
+	margin-left: ($spacing-number * 2) !important;
+}
+.margin-left-l {
+	margin-left: ($spacing-number * 3) !important;
+}
+.margin-left-xl {
+	margin-left: ($spacing-number * 4) !important;
+}
+
+.profile-phone .hiddenPhone,
+.profile-tablet .hiddenTablet,
+.profile-desktop .hiddenDesktop {
+	display: none;
+	visibility: hidden;
+}
+
+
+.profile-phone,
+.profile-tablet {
+	.summary {
+		font-size: $font-size-base;
+	}
+	.no-padding {
+		padding: 0 !important;
+	}
+	.card .no-padding {
+		padding: 0 !important;
+	}
+	.card .card .no-padding {
+		padding: 0 !important;
+	}
+
+	// Allround paddings
+	.padding-xs {
+		padding: ($spacing-number / 2) !important;
+	}
+	.padding-s {
+		padding: $spacing-number !important;
+	}
+	.padding-m {
+		padding: ($spacing-number * 2) !important;
+	}
+	.padding-l {
+		padding: ($spacing-number * 3) !important;
+	}
+	.padding-xl {
+		padding: ($spacing-number * 4) !important;
+	}
+	// Top paddings
+	.padding-top-xs {
+		padding-top: ($spacing-number / 2) !important;
+	}
+	.padding-top-s {
+		padding-top: $spacing-number !important;
+	}
+	.padding-top-m {
+		padding-top: ($spacing-number * 2) !important;
+	}
+	.padding-top-l {
+		padding-top: ($spacing-number * 3) !important;
+	}
+	.padding-top-xl {
+		padding-top: ($spacing-number * 4) !important;
+	}
+	// Right paddings
+	.padding-right-xs {
+		padding-right: ($spacing-number / 2) !important;
+	}
+	.padding-right-s {
+		padding-right: $spacing-number !important;
+	}
+	.padding-right-m {
+		padding-right: ($spacing-number * 2) !important;
+	}
+	.padding-right-l {
+		padding-right: ($spacing-number * 3) !important;
+	}
+	.padding-right-xl {
+		padding-right: ($spacing-number * 4) !important;
+	}
+	// Bottom paddings
+	.padding-bottom-xs {
+		padding-bottom: ($spacing-number / 2) !important;
+	}
+	.padding-bottom-s {
+		padding-bottom: $spacing-number !important;
+	}
+	.padding-bottom-m {
+		padding-bottom: ($spacing-number * 2) !important;
+	}
+	.padding-bottom-l {
+		padding-bottom: ($spacing-number * 3) !important;
+	}
+	.padding-bottom-xl {
+		padding-bottom: ($spacing-number * 4) !important;
+	}
+	// Left paddings
+	.padding-left-xs {
+		padding-left: ($spacing-number / 2) !important;
+	}
+	.padding-left-s {
+		padding-left: $spacing-number !important;
+	}
+	.padding-left-m {
+		padding-left: ($spacing-number * 2) !important;
+	}
+	.padding-left-l {
+		padding-left: ($spacing-number * 3) !important;
+	}
+	.padding-left-xl {
+		padding-left: ($spacing-number * 4) !important;
+	}
+
+	// Allround paddings
+	.margin-xs {
+		margin: ($spacing-number / 2) !important;
+	}
+	.margin-s {
+		margin: $spacing-number !important;
+	}
+	.margin-m {
+		margin: ($spacing-number * 2) !important;
+	}
+	.margin-l {
+		margin: ($spacing-number * 3) !important;
+	}
+	.margin-xl {
+		margin: ($spacing-number * 4) !important;
+	}
+	// Top paddings
+	.margin-top-xs {
+		margin-top: ($spacing-number / 2) !important;
+	}
+	.margin-top-s {
+		margin-top: $spacing-number !important;
+	}
+	.margin-top-m {
+		margin-top: ($spacing-number * 2) !important;
+	}
+	.margin-top-l {
+		margin-top: ($spacing-number * 3) !important;
+	}
+	.margin-top-xl {
+		margin-top: ($spacing-number * 4) !important;
+	}
+	// Right paddings
+	.margin-right-xs {
+		margin-right: ($spacing-number / 2) !important;
+	}
+	.margin-right-s {
+		margin-right: $spacing-number !important;
+	}
+	.margin-right-m {
+		margin-right: ($spacing-number * 2) !important;
+	}
+	.margin-right-l {
+		margin-right: ($spacing-number * 3) !important;
+	}
+	.margin-right-xl {
+		margin-right: ($spacing-number * 4) !important;
+	}
+	// Bottom paddings
+	.margin-bottom-xs {
+		margin-bottom: ($spacing-number / 2) !important;
+	}
+	.margin-bottom-s {
+		margin-bottom: $spacing-number !important;
+	}
+	.margin-bottom-m {
+		margin-bottom: ($spacing-number * 2) !important;
+	}
+	.margin-bottom-l {
+		margin-bottom: ($spacing-number * 3) !important;
+	}
+	.margin-bottom-xl {
+		margin-bottom: ($spacing-number * 4) !important;
+	}
+	// Left paddings
+	.margin-left-xs {
+		margin-left: ($spacing-number / 2) !important;
+	}
+	.margin-left-s {
+		margin-left: $spacing-number !important;
+	}
+	.margin-left-m {
+		margin-left: ($spacing-number * 2) !important;
+	}
+	.margin-left-l {
+		margin-left: ($spacing-number * 3) !important;
+	}
+	.margin-left-xl {
+		margin-left: ($spacing-number * 4) !important;
+	}
+	
+}

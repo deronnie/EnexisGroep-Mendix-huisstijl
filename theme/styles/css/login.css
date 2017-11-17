@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Agenda';
+    src: url('../agenda/Agenda-Light.eot');
+    src: url('../agenda/Agenda-Light.eot?#iefix') format('embedded-opentype'), url('../agenda/Agenda-Light.woff') format('woff'), url('../agenda/Agenda-Light.ttf') format('truetype'), url('../agenda/Agenda-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Agenda_bold';
+    src: url('../agenda/Agenda-Bold.eot');
+    src: url('../agenda/Agenda-Bold.eot?#iefix') format('embedded-opentype'), url('../agenda/Agenda-Bold.woff') format('woff'), url('../agenda/Agenda-Bold.ttf') format('truetype'), url('../Agenda-Bold.woff2') format('woff2');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font: 1.125em/1.33333 "Agenda", Arial, Helvetica, sans-serif #5f605f;
+    background: url(../img/login-bg.jpg) no-repeat center center fixed #f4f4f4; 
+    background-size: cover;
+}
+
+.center-container {
+    width: 100%;
+    padding-top: 7%;
+    max-width: 615px;
+    min-width: 180px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+.login-form {
+    padding: 0 16px 70px 16px;
+    background: #f4f4f4;
+    height: auto;
+    width: 83%;
+    margin: 0 auto;
+    box-shadow: 0 0 8px rgba(0,0,0,.5);
+}
+input.form-control {
+    padding: 4px 12px 0 33px !important;
+}
+.login-logo {
+    margin: 0 auto;
+    width: 47%;
+    padding-bottom: 62%;
+    background-image: url(../img/Inlogscherm-logo.svg);
+    background-size: cover;
+}
+
+.login-message {
+    display: none;
+}
+
+.login-form .well {
+    margin: 0 auto;
+    border: 0;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+label {
+    font-weight: bold;
+}
+.login-form-inputs input {
+    width: 100%;
+    height: 2.5rem;
+}
+.login-form-inputs #usernameInput {
+    background: #FFF url(../img/Inlogscherm-inputs.svg) 8px -3px no-repeat;
+    background-size: 1.25rem;
+}
+.login-form-inputs #passwordInput {
+    background: #FFF url(../img/Inlogscherm-inputs.svg) 8px -48px no-repeat;
+    background-size: 1.25rem;
+}
+
+.login-sso-button {
+    display: block;
+    height: 48px;
+    border-bottom: none;
+    margin: 0 auto;
+    line-height: 3;
+    border: none;
+}
+#loginButton {
+    float:right;
+}
+.login-or-label {
+    display: block;
+    width: 80%;
+    margin: 16px auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+.btn-default {
+    float: right;
+}
+.login-form-inputs label {
+    display: none;
+    visibility: hidden;
+}
+
+.CrossIcon {
+    color: #B50900;
+    display: none;
+}
+
+.login-service {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+hr.login-hr {
+    color: #acacac;
+    background: #acacac;
+    height: 1px;
+    max-width: 470px;
+}

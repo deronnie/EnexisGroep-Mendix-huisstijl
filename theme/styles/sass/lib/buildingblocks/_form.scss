@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Form
+
+   To extend the default form
+========================================================================== */
+.form {
+	 
+}
+.form-group {
+	margin-bottom: ($spacing-number * 2);
+}
+.form-group .control-label,
+.control-label {
+	color: $color-label;	
+	font-weight: $font-weight-label; 
+	padding-top: 5px;
+	padding-right: $spacing-number;
+	margin-bottom: 0;
+	// text-align: $label-positioning;	
+}
+.form-footer {
+	border-top: 1px solid $gray-lighter;
+ 	padding: $spacing-number 0;
+ 	margin-top: ($spacing-number * 2);
+}

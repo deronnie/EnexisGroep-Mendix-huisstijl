@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Typography 
+========================================================================== */
+p {
+	margin: 0 0 ($spacing-number * 3) 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+
+label { 
+	padding-top: 0; 
+}
+
+h1, .h1, .h1 > * { font-size: $font-size-h1; } 
+h2, .h2, .h2 > * { font-size: $font-size-h2; }
+h3, .h3, .h3 > * { font-size: $font-size-h3; }
+h4, .h4, .h4 > * { font-size: $font-size-h4; }
+h5, .h5, .h5 > * { font-size: $font-size-h5; }
+h6, .h6, .h6 > * { font-size: $font-size-h6; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: $font-weight-headers;
+	color: $color-text-black-secondary;
+	text-transform: uppercase;
+	margin-top: ($spacing-number * 3);
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+	letter-spacing: ($font-spacing - 0.03px);
+	line-height: 1.4em;
+}
+h4,
+.h4 {
+	letter-spacing: ($font-spacing + 0.01px);
+	line-height: 1.333em;
+}
+h5, h6,
+.h5, .h6 {
+	letter-spacing: ($font-spacing + 0.11px);
+	line-height: 1.333em;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+	margin-bottom: ($spacing-number * 2)
+}
+h4, h5,
+.h4, .h5 {
+	margin-bottom: ($spacing-number * 2)
+}
+h6,
+.h6 {
+	margin-bottom: 0;
+}
+
+/* Text Weights */
+.text-light, .text-light > *, .text-light label { 
+	@include font(light);
+}
+.text-normal, .text-normal > *, .text-normal label  { 
+	@include font(normal);
+}
+.text-semibold, .text-semibold > *, .text-semibold label  { 
+	@include font(semibold);
+}
+.text-bold, .text-bold > *, .text-bold label  { 
+	@include font(bold);
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+/* ==========================================================================
+   Text Utility Classes
+========================================================================== */
+.text-spacing {
+	margin-top: ($spacing-number * 2);
+	margin-bottom: ($spacing-number * 2);	
+}
+.text-lined {
+	padding-bottom: $spacing-number;
+	border-bottom: 1px solid $color-border-default;
+}
+
+
+/* Text Break */
+.text-break {
+	-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+
+/* ==========================================================================
+   Typography
+
+   Text Colors
+========================================================================== */
+// Gray shades
+.text-gray-darker 	{	color: $gray-darker; 	}				
+.text-gray-dark 	{	color: $gray-dark; 		}
+.text-gray 			{	color: #b7b7b7;			}
+.text-gray-light	{	color: $gray-light;		}
+.text-gray-primary	{	color: $gray-primary;	}
+.text-gray-lighter	{	color: $gray-lighter;	}	
+	 				 
+// Colors
+.text-default, .text-default:hover	{	color: $color-text-black; }
+.text-primary, .text-primary:hover	{	color: $color-primary;	}
+.text-info, .text-info:hover		{	color: $color-info;		}
+.text-success, .text-success:hover	{	color: $color-success;	}
+.text-warning, .text-warning:hover	{	color: $color-warning;	}
+.text-danger, .text-danger:hover	{	color: $color-danger;	}
+
+// Text colors
+.text-black 						{	color: $color-text-black;	}
+.text-black-secondary				{	color: $color-text-black-secondary; }
+.text-black-disabled 				{	color: $color-text-black-disabled; 	}
+.text-black-hint 					{	color: $color-text-black-hint; 		}
+
+.text-white 						{	color: $color-text-white; 	}
+.text-white-secondary				{	color: $color-text-white-secondary; }
+.text-white-disabled 				{	color: $color-text-white-disabled; 	}
+.text-white-hint 					{	color: $color-text-white-hint; 		}

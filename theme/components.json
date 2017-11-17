@@ -1,0 +1,14 @@
+{
+    "files": {
+        "css": [
+            "lib/bootstrap/css/bootstrap.min.css",
+            "styles/font-awesome/css/font-awesome.min.css",
+            "mxclientsystem/mxui/ui/mxui.css",
+            "styles/css/lib/lib.css",
+            "styles/font-awesome/glyphicon-to-FA.css",
+            "addon/addon.css"
+        ],
+        "js": [ "mxclientsystem/mxui/mxui.js" ]
+    }
+	,"cachebust":"{{cachebust}}"
+}

@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Page Header
+========================================================================== */
+.pageheader {
+	padding-bottom: 0 !important;
+	.pageheader-title,
+	h1, .h1, h2, .h2,
+	h3, .h3, h4, .h4, {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	.pageheader-subtitle {
+		color: $color-text-black-secondary;
+		font-size: 18px;
+	}
+} 
+
+.profile-phone,
+.profile-tablet {
+	.mobilePageheader {
+		display: -webkit-flex;
+		display:         flex;
+		visibility: visible;
+		padding: $spacing-number 32px 0 $spacing-number;
+		background: $color-layout-bg-white;
+		.mx-header-center {
+			margin: 0 auto;
+		    padding-top: 7px;
+		    overflow: hidden;
+		}
+		h1 {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 18px
+		}
+	}
+	.pageheader {
+		display: none;
+		visibility: hidden;
+	}
+}
+.profile-desktop {
+	.pageheader {
+		display: block;
+		visibility: visible;
+	}
+	.mobilePageheader {
+		display: none;
+		visibility: hidden;
+	}
+}

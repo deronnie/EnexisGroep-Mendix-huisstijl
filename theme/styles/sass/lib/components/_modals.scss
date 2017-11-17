@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Modals 
+
+   Default Mendix Modals. Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults
+========================================================================== */
+.modal-dialog { 
+	
+	.modal-content {
+		border-radius: 0;
+		box-shadow: 0 0 8px rgba(0,0,0,0.5);
+		border: 0;
+		padding: ($spacing-number * 2);
+		//border: 1px solid rgba(0,0,0,0);
+
+		.modal-header {
+			border-radius: 0; // Because of the class .mx-window-active in mxui.css
+			background-color: $color-modal-header-bg;
+			border-bottom-color: $color-modal-header-border;
+			padding: 0 0 $spacing-number 0;
+			h4 {
+				color: $color-modal-header-text;
+				font-size: 21px;
+				margin: 0;
+			}
+			.close {
+				opacity: 1;
+				filter: alpha(opacity=100); /* For IE8 and earlier */
+				font-size: 46px;
+				line-height: 40px;
+				color: $color-modal-header-text;
+				text-shadow: none;
+				margin-top: -10px;
+			}
+		}
+		.modal-body {
+			padding: $spacing-number;
+		}
+		.modal-footer {
+			padding: 0;
+			margin-top: 0;
+			border-style: none;
+			text-align: left;
+			.btn {
+				margin: 0;
+			}
+			.btn-primary {
+				float: right;
+			}
+		}
+	}
+	.wgt-BooleanSlider_control.form-control.btn-default {
+		margin: 0;
+		height: 31px;
+	    background-color: $color-btn-bg-default;
+		border-color:  $color-btn-bg-default;
+		color: $color-btn-text-default;
+		&:hover,
+		&:active {
+		    background-color: $color-primary;
+	    	border-color:  $color-primary;
+	    	color: $color-text-white;
+		}
+	}
+}
+
+
+/* Default Mendix Window Modal */
+.mx-window {
+
+	// If popup direct child is a dataview it gets the class mx-window-view
+	&.mx-window-view .mx-window-body {
+		padding: 0;
+
+		// Dataview in popup
+		> .mx-dataview > .mx-dataview-content, 
+		> .mx-placeholder > .mx-dataview > .mx-dataview-content {
+			padding: ($spacing-number * 2);
+		}
+		> .mx-dataview > .mx-dataview-controls, 
+		> .mx-placeholder > .mx-dataview > .mx-dataview-controls {
+			text-align: left;
+			margin: 0;
+		}
+	}
+	.mx-dataview-controls {
+		padding-bottom: 0;
+	}
+	.mx-layoutgrid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+/* Default Mendix Login Modal */
+.mx-login {
+	.modal-body {
+		padding: 0 ($spacing-number * 2);
+	}
+	.modal-content {
+		input {
+			box-shadow:	none;
+			display: block;
+			padding: $spacing-number;
+			width: calc(100% - 1px);
+			height: $input-height;
+			border: 1px solid $color-input-border;
+			background-color: $color-input-bg;
+			background-image: none;
+			color: $color-input-text;
+			vertical-align: middle;
+			border-radius: 0;
+			font-size: $font-size-base;
+			line-height: $line-height-base;
+
+			&:focus {
+				border-color: $color-input-border-focus;
+				background-color: $color-input-bg-focus;
+				outline: 0;
+				color: $color-input-text-focus;
+				box-shadow: none;
+			}
+		}
+	}
+	.modal-header,
+	.modal-footer {
+		border: 0;
+	}
+	button {
+		font-size: ($spacing-number * 2);
+	}
+	h4 {
+		color: #aaa;
+		font-weight: $font-weight-bold;
+	}
+}
+
+.tooltip {
+	position: fixed !important;
+    width: auto !important;
+	.tooltip-inner {
+		padding: $spacing-number;
+		text-align: left;
+	    background-color: $color-default;
+	    max-width: 400px;
+	    width: auto;
+	}
+}
+
+.profile-phone,
+.profile-tablet {
+	.modal-dialog { 
+		.modal-content {
+			padding: ($spacing-number * 2) ($spacing-number * 1.5);
+		}
+	}
+}

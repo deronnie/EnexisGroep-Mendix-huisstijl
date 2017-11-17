@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Sidebar Header
+========================================================================== */
+.sidebarheader {
+	padding: $spacing-number ($spacing-number * 2);
+}
+.sidebarheader-content {
+
+}
+.sidebarheader-img {
+	margin-bottom: $spacing-number;
+}
+.sidebarheader-title {
+	color: $color-text-white;
+}
+.sidebarheader-subtitle {
+	color: $color-text-black-secondary;
+} 
+ 

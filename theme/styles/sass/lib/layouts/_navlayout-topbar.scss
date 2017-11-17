@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Region Topbar
+ 
+   Specific topbar styling
+========================================================================== */
+.profile-phone {
+	.phoneMenu {
+		display: inline-block;
+		width: 100%;
+		visibility: visible;
+	}
+	.desktopMenu,
+	.tabletMenu,
+	.logo {
+		display: none;
+		visibility: hidden;
+	}
+	.mx-scrollcontainer-move-in, .mx-scrollcontainer-move-out {
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		z-index: 99;
+	}
+	.mx-scrollcontainer-open {
+		z-index: 99;
+	}
+	.sprintrFeedbackNode {
+		font-family: FontAwesome;
+		background: rgba(255,2555,2555,0.4) url(../../../img/megaphone.svg) 7px 7px no-repeat;
+		background-size: 22px;
+		border: 1px solid $color-default;
+	    height: 35px;
+	    width: 35px;
+	    position: relative;
+	    float: right;
+	    z-index: 1;
+	    top: 10px;
+		margin-right: 8px;
+		padding-top: 7px;
+		color: $color-default;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.sprintrFeedbackContainer {
+		top: 8px !important;
+	}
+}
+
+.profile-tablet {
+	.tabletMenu {
+		display: inline-block;
+		width: 100%;
+		visibility: visible;
+	}
+	.desktopMenu,
+	.phoneMenu,
+	.logo {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.profile-desktop {
+	.desktopMenu {
+		display: inline-block;
+		visibility: visible;
+	}
+	.tabletMenu,
+	.phoneMenu,
+	.back-btn-holder,
+	.toggle-btn {
+		display: none;
+		visibility: hidden;
+	}
+	.logo {
+		width: 126px;
+    	margin-top: -5px;
+		display: block;
+		visibility: visible;
+		position: absolute;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+
+.navlayout-topbar {
+	> .btn-inverse {
+		background-color: $color-btn-bg-default;
+	    color: $color-default;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    &:hover,
+	    &:active {
+	    	background-color: $color-btn-bg-primary;
+	    	color: $color-text-white;
+	    }
+	}
+	.region-topbar {
+		border-bottom: 5px solid $gray;
+
+		/* Reset Layout Grid spacing */
+		.container-fluid {
+			 padding: 0 ($spacing-number * 2);
+		}
+		.mx-navbar {
+			float: left;
+			margin-left: 55px;
+			background-color: transparent;
+			border: none;
+			@media (max-width: $screen-sm) {
+				float: none;
+				clear: both;
+			}
+			ul.nav { 
+				> li.mx-navbar-item > a {
+					padding: ($spacing-number * 2);
+				    line-height: 1.85em;
+				}
+				.dropdown-menu {
+					border: 5px solid $gray;
+					border-radius: 0;
+				    -webkit-box-shadow: none;
+				    box-shadow: 		none;
+				    font-size: 16px;
+					&:before {
+				        content: "";
+					    position: absolute;
+				        top: -15px;
+					    left: 5px;
+					    border-width: 0px 16px 15px 15px;
+					    border-style: solid;
+					    border-color: $gray transparent;
+					    display: block;
+					    width: 0;
+					}
+					&:after {
+				        content: "";
+					    position: absolute;
+				        top: -9px;
+					    left: 10px;
+					    border-width: 0px 9px 9px 9px;
+					    border-style: solid;
+					    border-color: $color-layout-bg-white transparent;
+					    display: block;
+					    width: 0;
+					}
+					> li {
+						padding: 0 $spacing-number;
+						> a {
+							text-decoration: none;
+							color: $color-navtopbar-text;
+							border-bottom: 1px solid $color-default;
+						    padding: 6px $spacing-number;
+						}
+					}
+					> li:last-child > a {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		.navbar-header {
+			@media (min-width: $screen-sm) {
+				float: none;
+			}
+			.menuContainer {
+				margin-left: 130px;
+			}
+		}
+		.toggle-btn {
+			float: left;
+			margin: 7px 0 0 0;
+			min-width: 40px;
+			width: 40px;
+			height: 40px;
+			padding: $spacing-number;
+		}
+		.back-btn-holder {
+			margin: 7px 0 0 0;
+			float: left;
+			.back-btn {
+			    margin: 0;
+			    min-width: 40px;
+			    padding: $spacing-number;
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+.menuHeader {
+	padding: $spacing-number 12px 7px 12px;
+	border-bottom: 5px solid $gray;
+}
+
+.logoMobile {
+    width: 130px;
+    float: right;
+    z-index: 9;
+    margin-top: -63px;
+}
+.logo-svg {
+	width: 100%;
+	padding-bottom: 39.2%;
+	background-image: url(../../img/Enexis-group-logo.svg);
+	background-size: cover;
+	img {
+		display: none;
+		visibility: hidden;
+	}
+}

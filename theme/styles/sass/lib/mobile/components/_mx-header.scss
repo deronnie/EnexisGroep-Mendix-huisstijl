@@ -1,0 +1,14 @@
+/*
+* Mendix Documentation
+* Special styles for presenting mobile components
+*/
+
+/* 
+* Header
+*
+* Default Mendix Header for Mobile 
+*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.mx-header .mx-header-right { right: 63px !important; }
+}

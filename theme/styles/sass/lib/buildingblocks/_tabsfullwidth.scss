@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Tabs full width
+========================================================================== */
+.tabsfullwidth {
+	background-color: $color-layout-bg-white;
+	> .mx-tabcontainer-tabs {
+		margin-bottom: 0;
+
+		@media (min-width: $screen-sm) {
+			padding: 0 ($spacing-number * 5);
+		}
+	}
+}

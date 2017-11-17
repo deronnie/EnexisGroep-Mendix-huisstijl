@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Section Header
+========================================================================== */
+.sectionheader {
+	margin-bottom: ($spacing-number * 2);
+	border-bottom: 5px solid $color-border-white;
+}
+.card .sectionheader {
+	border-bottom: 5px solid $color-border-gray-light;
+}
+.card .card .sectionheader {
+	border-bottom: 5px solid $color-border-white;
+}
+.sectionheader-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.sectionheader-subtitle {
+	color: $color-text-black-secondary;
+	margin-bottom: $spacing-number;
+	font-size: 18px;
+}
+.sectionheader-avatar {
+	padding: ($spacing-number / 2);
+	border: 2px solid $color-border-default;
+	background-color: #FFF;
+}
+ 
+.profile-phone,
+.profile-tablet {
+	.sectionheader-subtitle {
+		color: $color-text-black-secondary;
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+}

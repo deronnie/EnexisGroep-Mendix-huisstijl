@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Base 
+
+   Default settings
+========================================================================== */
+
+html {
+	font-size: 100%;
+}
+body {
+	@include font(normal);
+	color: $font-color-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	background-color: $color-layout-bg;
+	letter-spacing: $font-spacing;
+}
+a {
+	@include font(bold);
+	color: $color-link;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $color-link-hover;
+	}
+	// Address `outline` inconsistency between Chrome and other browsers.
+	&:focus {
+	  outline: 0; 
+	}
+	// Improve readability when focused and also mouse hovered in all browsers
+	&:active, 
+	&:hover {
+	  outline: 0;
+	}
+}
+
+// Removes large blue border in chrome on focus and active states 
+input:focus, 
+button:focus,
+.mx-link:focus {
+  outline: 0 !important; 
+}
+// Removes large blue border for tabindexes from widgets
+div[tabindex] {
+	outline: 0; 
+}
+.mx-layoutcontainer-center {
+	overflow-y:hidden;
+}
+
+//otherwise links set to ugly blue in hybrid app
+.mx-hybridapp a 
+{
+	@include font(bold);
+	color: $color-link;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $color-link-hover;
+	}
+	// Address `outline` inconsistency between Chrome and other browsers.
+	&:focus {
+	  outline: 0; 
+	}
+	// Improve readability when focused and also mouse hovered in all browsers
+	&:active, 
+	&:hover {
+	  outline: 0;
+	}
+}
+

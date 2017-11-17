@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Card 
+========================================================================== */
+.card {
+	padding: ($spacing-number * 3) ($spacing-number * 3) !important;
+	margin-bottom: ($spacing-number * 3) !important;
+	background-color: $color-layout-bg-white;
+	border-radius: 0;
+    border: none;
+    &:last-child {
+    	margin-bottom: 0 !important;
+    }
+    .card {
+		padding: ($spacing-number * 2) !important;
+		background-color: $color-layout-bg-secondary;
+		.card {
+			background-color: $color-layout-bg-white;
+		}
+	}
+    h2, 
+    .h2 {
+    	&:first-child {
+    		margin-top: 0;
+    	}
+    }
+    &.statusDefault {
+    	border-left: $spacing-number solid $color-default;
+    }
+    &.statusPrimary {
+    	border-left: $spacing-number solid $color-primary;
+    }
+    &.statusInfo {
+    	border-left: $spacing-number solid $color-info;
+    }
+    &.statusSuccess {
+    	border-left: $spacing-number solid $color-success;
+    }
+    &.statusWarning {
+    	border-left: $spacing-number solid $color-warning;
+    }
+    &.statusDanger {
+    	border-left: $spacing-number solid $color-danger;
+    }
+}
+
+.profile-phone,
+.profile-tablet {
+	.card {
+		padding: ($spacing-number * 2) !important;
+		margin-bottom: $spacing-number !important;
+		.card {
+			padding: $spacing-number !important;
+		}
+	}
+}
+
+.card-maps {
+	padding: 0;
+}
+
+/* Title + button + border below title and button */
+.card-header-action {
+	overflow: hidden;
+	margin-bottom: ($spacing-number * 2);
+	.card-title {
+		float: left;
+	}
+	.btn {
+		float: right;
+	}
+}
+.card-details {
+	padding: $spacing-number;
+}
+.card-title {
+	margin-top: 0;
+}
+.card-subtitle {
+	font-size: 1.111em;
+	color: $color-text-black-secondary;
+	margin-bottom: $spacing-number;
+}
+.card-annotation {
+	text-transform: uppercase;
+	letter-spacing: $spacing-number;
+	padding-bottom: $spacing-number;
+}
+.card-icon {
+	border-radius: 50%;
+	margin: ($spacing-number * 4) auto;
+	width: 125px;
+	height: 125px;
+
+	@media (max-width: $screen-md) {
+		width: 75px;
+  		height: 75px;
+	}
+
+	.glyphicon {
+		font-size: 6em;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.card-image {
+	margin: ($spacing-number * 4) auto;
+}
+.card-user-image {
+	border: 4px solid #FFF;
+}
+.card-link {
+	font-size: $font-size-small;
+}

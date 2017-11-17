@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Form Block
+
+   Used in default forms
+========================================================================== */
+.formblock { 
+	margin-bottom: ($spacing-number * 2);
+	margin-top: ($spacing-number * 2);
+}
+.formblock-header {
+	color: $color-default;
+	border-bottom: 5px solid $color-border-white;
+	margin-bottom: ($spacing-number * 2);
+	padding-bottom: ($spacing-number / 2);
+	font-size: $font-size-h5;
+	line-height: 1.333em;
+}
+
+.card .formblock-header {
+	border-bottom: 5px solid $color-border-gray-light;
+}
+.card .card .formblock-header {
+	border-bottom: 5px solid $color-border-white;
+}
+
+.profile-phone,
+.profile-tablet {
+	.formblock { 
+		margin-bottom: $spacing-number;
+		margin-top: $spacing-number;
+	}
+	.formblock-header {
+		font-size: $font-size-base;
+	}
+}

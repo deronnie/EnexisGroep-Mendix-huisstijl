@@ -1,0 +1,523 @@
+/* ==========================================================================
+   Tab Container
+ 
+   Default Mendix Tab Container Widget. Tab containers are used to show information categorized into multiple tab pages. 
+   This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen
+========================================================================== */
+.mx-tabcontainer {
+	.mx-tabcontainer-tabs {
+		margin-bottom: 0;
+		border-bottom: 0;
+		> li > a {
+			@include font(normal);
+
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			-moz-transition: border-color 0s linear;
+			-o-transition: border-color 0s linear;
+			-webkit-transition: border-color 0s linear;
+			transition: border-color 0s linear;
+
+			margin-right: 6px;
+			padding: ($spacing-number * 2) ($spacing-number * 3);
+			color: $color-tab-text;
+			text-decoration: none;
+			text-transform: uppercase;
+			background-color: $color-layout-bg-secondary;
+			border: 5px solid transparent;
+			border-bottom: 0;
+			border-radius: 0;
+			border-color: $color-layout-bg-white $color-layout-bg-white transparent $color-layout-bg-white;
+			&:hover {
+				border: 5px solid transparent;
+				border-bottom: 0;
+				background-color: $color-tab-bg-hover;
+			    border-color: $color-tab-bg-hover $color-tab-bg-hover transparent $color-tab-bg-hover;
+			    color: $color-text-white;
+			}
+		}
+
+		> li.active > a,
+		> li.active > a:hover  {
+			background-color: $color-layout-bg-white;
+			color: $color-tab-text-active;
+			border-color: $color-layout-bg-white $color-layout-bg-white transparent $color-layout-bg-white;
+		}
+		> li.active > a:focus {
+			border-width: 5px 5px 0 5px;
+		}
+	}
+	.mx-tabcontainer-content {
+		background-color: $color-layout-bg-white;
+	}
+	.formblock-header,
+	.sectionheader {
+		border-bottom: 5px solid $color-border-gray-light;
+	}
+	.card {
+		background-color: $color-layout-bg-secondary;
+		.formblock-header,
+		.sectionheader {
+			border-bottom: 5px solid $color-border-white;
+		}
+		.card {
+			background-color: $color-layout-bg-white;
+			.formblock-header,
+			.sectionheader {
+				border-bottom: 5px solid $color-border-gray-light;
+			}
+			.btn-default {
+				background-color:$color-layout-bg-secondary;
+				&:hover,
+		  		&:active {
+		  			background-color: $color-btn-bg-primary;
+		  		}
+			}
+			.mx-grid-searchbar {
+				background-color:$color-layout-bg-secondary;
+				.btn-default {
+		  			background-color: $color-layout-bg-white;
+			  		&:hover,
+			  		&:active {
+			  			background-color: $color-btn-bg-primary;
+			  		}
+		  		}
+				.mx-grid-search-button {
+		  			background-color: $color-btn-bg-primary;
+		  			color: $color-text-white;
+		  			&:hover,
+		  			&:active {
+		  				background-color: $color-btn-bg-inverse;
+		  			}
+		  		}
+			}
+			.btn-default {
+				background-color:$color-layout-bg-secondary;
+				&:hover,
+		  		&:active {
+		  			background-color: $color-btn-bg-primary;
+		  		}
+			}
+			.card {
+				background-color: $color-layout-bg-secondary;
+				.formblock-header,
+				.sectionheader {
+					border-bottom: 5px solid $color-border-white;
+				}
+			}
+		}
+	}
+	.mx-tabcontainer {
+		.mx-tabcontainer-tabs {
+			> li > a {
+				background-color: $color-layout-bg-white;
+				border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
+				&:hover {
+					border: 5px solid transparent;
+					border-bottom: 0;
+					background-color: $color-tab-bg-hover;
+				    border-color: $color-tab-bg-hover $color-tab-bg-hover transparent $color-tab-bg-hover;
+				    color: $color-text-white;
+				}
+			}
+
+			> li.active > a,
+			> li.active > a:hover {
+				background-color: $color-layout-bg-secondary;
+				border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
+				color: $color-tab-text-active;
+			}
+			> li.active > a:focus {
+				border-width: 5px 5px 0 5px;
+			}
+		}
+		.mx-tabcontainer-content {
+			background-color: $color-layout-bg-secondary;
+			.btn-default {
+	  			background-color: $color-layout-bg-white;
+		  		&:hover,
+		  		&:active {
+		  			background-color: $color-btn-bg-primary;
+		  		}
+	  		}
+		}
+		.card,
+		.mx-grid-searchbar {
+			background-color: $color-layout-bg-white;
+			.btn-default {
+	  			background-color: $color-layout-bg-secondary;
+		  		&:hover,
+		  		&:active {
+		  			background-color: $color-btn-bg-primary;
+		  		}
+	  		}
+	  		.mx-grid-search-button {
+	  			background-color: $color-btn-bg-primary;
+	  			&:hover,
+	  			&:active {
+	  				background-color: $color-btn-bg-inverse;
+	  			}
+	  		}
+		}
+		.formblock-header,
+		.sectionheader {
+			border-bottom: 5px solid $color-border-white;
+		}
+		.card {
+			background-color: $color-layout-bg-white;
+			.formblock-header,
+			.sectionheader {
+				border-bottom: 5px solid $color-border-gray-light;
+			}
+			.card {
+				background-color: $color-layout-bg-secondary;
+				.formblock-header,
+				.sectionheader {
+					border-bottom: 5px solid $color-border-white;
+				}
+				.card {
+					background-color: $color-layout-bg-white;
+					.formblock-header,
+					.sectionheader {
+						border-bottom: 5px solid $color-border-gray-light;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.card {
+	.mx-tabcontainer {
+		.mx-tabcontainer-tabs {
+			> li > a {
+				background-color: $color-layout-bg-white;
+				border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
+				&:hover {
+					border: 5px solid transparent;
+					border-bottom: 0;
+					background-color: $color-tab-bg-hover;
+				    border-color: $color-tab-bg-hover $color-tab-bg-hover transparent $color-tab-bg-hover;
+				    color: $color-text-white;
+				}
+			}
+
+			> li.active > a,
+			> li.active > a:hover  {
+				background-color: $color-layout-bg-secondary;
+				border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
+				color: $color-tab-text-active;
+			}
+			> li.active > a:focus {
+				border-width: 5px 5px 0 5px;
+			}
+		}
+		.mx-tabcontainer-content {
+			background-color: $color-layout-bg-secondary;
+		}
+		.card {
+			background-color: $color-layout-bg-white;
+			.mx-grid-searchbar {
+	  			background-color: $color-layout-bg-secondary;
+	  			.mx-button {
+		  			background-color: $color-layout-bg-white;
+			  		&:hover,
+			  		&:active {
+			  			background-color: $color-btn-bg-primary;
+			  		}
+		  		}
+		  		.mx-grid-search-button {
+		  			background-color: $color-btn-bg-primary;
+		  			&:hover,
+		  			&:active {
+		  				background-color: $color-btn-bg-inverse;
+		  			}
+		  		}
+	  		}
+			.btn-default {
+	  			background-color: $color-layout-bg-secondary;
+	  			color: $color-btn-text-default;
+		  		&:hover,
+		  		&:active {
+		  			background-color: $color-btn-bg-primary;
+		  			color: $color-btn-text-primary;
+		  		}
+	  		}
+	  		.formblock-header,
+			.sectionheader {
+				border-bottom: 5px solid $color-border-gray-light;
+			}
+			.card {
+				background-color: $color-layout-bg-secondary;
+				.mx-button {
+		  			background-color: $color-layout-bg-white;
+			  		&:hover,
+			  		&:active {
+			  			background-color: $color-btn-bg-primary;
+			  		}
+		  		}
+				.formblock-header,
+				.sectionheader {
+					border-bottom: 5px solid $color-border-white;
+				}
+				.card {
+					background-color: $color-layout-bg-white;
+					.formblock-header,
+					.sectionheader {
+						border-bottom: 5px solid $color-border-gray-light;
+					}
+				}
+			}
+		}
+		.formblock-header,
+		.sectionheader {
+			border-bottom: 5px solid $color-border-white;
+		}
+		.mx-tabcontainer {
+			.mx-tabcontainer-tabs {
+				margin-bottom: 0;
+				border-bottom: 0;
+				> li > a {
+					@include font(normal);
+
+					-moz-transition: all .2s ease-in-out;
+					-o-transition: all .2s ease-in-out;
+					-webkit-transition: all .2s ease-in-out;
+					transition: all .2s ease-in-out;
+					-moz-transition: border-color 0s linear;
+					-o-transition: border-color 0s linear;
+					-webkit-transition: border-color 0s linear;
+					transition: border-color 0s linear;
+
+					margin-right: 6px;
+					color: $color-tab-text;
+					text-decoration: none;
+					text-transform: uppercase;
+					background-color: $color-layout-bg-secondary;
+					border: 5px solid transparent;
+					border-bottom: 0;
+					border-radius: 0;
+					border-color: $color-layout-bg-white $color-layout-bg-white transparent $color-layout-bg-white;
+					&:hover {
+						border: 5px solid transparent;
+						border-bottom: 0;
+						background-color: $color-tab-bg-hover;
+					    border-color: $color-tab-bg-hover $color-tab-bg-hover transparent $color-tab-bg-hover;
+					    color: $color-text-white;
+					}
+				}
+
+				> li.active > a,
+				> li.active > a:hover {
+					background-color: $color-layout-bg-white;
+					color: $color-tab-text-active;
+					border-color: $color-layout-bg-white $color-layout-bg-white transparent $color-layout-bg-white;
+				}
+				> li.active > a:focus {
+					border-width: 5px 5px 0 5px;
+				}
+			}
+			.mx-tabcontainer-content {
+				background-color: $color-layout-bg-white;
+				.btn-default {
+		  			background-color: $color-layout-bg-secondary;
+			  		&:hover,
+			  		&:active {
+			  			background-color: $color-btn-bg-primary;
+			  		}
+		  		}
+			}
+			.card {
+				background-color: $color-layout-bg-secondary;
+				.mx-grid-searchbar {
+					background-color: $color-layout-bg-white;
+					.mx-button {
+			  			background-color: $color-layout-bg-secondary;
+				  		&:hover,
+				  		&:active {
+				  			background-color: $color-btn-bg-primary;
+				  		}
+			  		}
+			  		.mx-grid-search-button {
+			  			background-color: $color-btn-bg-primary;
+			  			&:hover,
+			  			&:active {
+			  				background-color: $color-btn-bg-inverse;
+			  			}
+			  		}
+				}
+				.mx-button {
+		  			background-color: $color-layout-bg-white;
+			  		&:hover,
+			  		&:active {
+			  			background-color: $color-btn-bg-primary;
+			  		}
+		  		}
+			}
+			.formblock-header,
+			.sectionheader {
+				border-bottom: 5px solid $color-border-gray-light;
+			}
+			.card {
+				background-color: $color-layout-bg-secondary;
+				.formblock-header,
+				.sectionheader {
+					border-bottom: 5px solid $color-border-white;
+				}
+				.card {
+					background-color: $color-layout-bg-white;
+					.formblock-header,
+					.sectionheader {
+						border-bottom: 5px solid $color-border-gray-light;
+					}
+					.card {
+						background-color: $color-layout-bg-secondary;
+						.formblock-header,
+						.sectionheader {
+							border-bottom: 5px solid $color-border-white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Tab Container Justified
+
+   Default Mendix Tab Container Widget rendered as justified
+========================================================================== */
+.tab-justified.mx-tabcontainer {
+	.mx-tabcontainer-tabs {
+		width: 100%;
+		border-bottom: 0;
+
+		> li {
+			display: table-cell;	
+			float: none;
+			margin: 0;
+			width: 1%;
+			&:last-child a {
+				margin-right: 0;
+			}
+			@media (max-width: 768px) {
+				display: block;
+				width: 100%;
+			}	
+			> a {
+				border-bottom: 0;
+				text-align: center;
+				margin-right: 0;
+			}
+		
+		}
+		> li.active > a {
+			border-bottom-color: transparent;
+
+			@media (max-width: 768px) {
+				border-bottom-color: $color-tab-border;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Tab Container Lined
+
+   Default Mendix Tab Container Widget rendered with tabs rendered without background
+========================================================================== */
+.tab-lined.mx-tabcontainer {
+	.mx-tabcontainer-tabs {
+		border-bottom: 5px solid $gray;
+		margin-bottom: 5px;
+        li {
+            margin-bottom: -5px;
+            margin-right: 0;
+
+            > a {
+                padding: $spacing-number ($spacing-number * 2);
+                border-width: 0;
+                border-bottom-width: 5px;
+				border-radius: 0;
+				color: $color-tab-text;
+				background:transparent;
+
+                &:hover {
+                    border-width: 0;
+	                border-bottom: 5px solid $color-tab-lined-border;
+	                background-color: transparent;
+	                color: $color-tab-lined-text-active;
+                }
+
+            }
+
+            &.active > a,
+            &.active > a:hover  {
+            	border-width: 0;
+                border-bottom: 5px solid $color-tab-lined-border-active;
+                background-color: transparent;
+                color: $color-tab-text-active;
+            }
+        }
+        > li.active > a:focus {
+			border-width: 0 0 5px 0;
+		}
+    }
+}
+
+
+
+/* ==========================================================================
+   Tab Container Bordered
+
+   Default Mendix Tab Container Widget rendered with borders
+========================================================================== */
+.tab-bordered.mx-tabcontainer {
+	.mx-tabcontainer-tabs {
+		margin: 0;
+	}
+}
+
+.mx-tabcontainer-content {
+	padding: ($spacing-number * 2);
+	border: 0;
+	border-top: none;
+	background-color: $color-layout-bg-white;
+}
+.card .mx-tabcontainer-content {
+	background-color: $color-layout-bg-secondary;
+}
+.profile-phone .mx-tabcontainer,
+.profile-tablet .mx-tabcontainer {
+	.mx-tabcontainer-content {
+		padding: ($spacing-number * 2) $spacing-number;
+	}
+}
+
+.profile-tablet,
+.profile-phone {
+	.tabMenu {
+		margin-bottom: 0;
+		.mx-tabcontainer-tabs {
+			margin-bottom: 0;
+		    position: fixed;
+		    background: $color-layout-bg-white;
+		    z-index: 999999;
+			> li {
+				display: table-cell;
+			    float: none;
+			    margin: 0;
+			    width: 1%;
+		        text-align: center;
+			}
+		}
+		.mx-tabcontainer-content {
+			background: $color-layout-bg;
+		    padding-top: 48px;
+		}
+	}
+}
+

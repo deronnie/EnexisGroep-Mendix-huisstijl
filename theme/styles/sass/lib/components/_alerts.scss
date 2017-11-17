@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Alerts
+
+   Default Bootstrap Alert boxes. Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages
+========================================================================== */
+.alert { 
+  @include font(bold);
+	border-radius: 0; 
+	padding: ($spacing-number * 2) !important;
+	border: 0;
+  display: block;
+	width: 100%;
+	min-height: 40px;
+  line-height: 1.5em;
+	border-left: 10px solid $color-default;
+	color: $color-text-black;
+  background-color: $color-alert-bg-default;
+}
+.alert-success { 
+	border-color: $color-success;
+	background-color: $color-alert-bg-success; 
+}
+.alert-info { 
+	border-color: $color-info;
+	background-color: $color-alert-bg-info;	 
+}
+.alert-warning { 
+	border-color: $color-warning; 
+	background-color: $color-alert-bg-warning;
+}
+.alert-danger { 
+	border-color: $color-danger;
+	background-color: $color-alert-bg-danger; 
+}
+.has-error .alert {
+	margin-top: ($spacing-number / 2);
+	margin-bottom: 0;
+}
+
+
+ul#noty_topCenter_layout_container {
+	width: 90% !important;
+	top: 57px !important;
+}
+ul#noty_topCenter_layout_container li {
+  background: $color-layout-bg !important;
+  border: 0 !important;
+  width: 100% !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 		 0 !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px !important;
+  box-shadow: 		  rgba(0, 0, 0, 0.4) 0px 2px 4px !important;
+}
+.profile-phone,
+.profile-tablet {
+    ul#noty_topCenter_layout_container {
+    width: 90% !important;
+    top: 52px !important;
+  }
+  .noty_message {
+    padding: ($spacing-number * 2) ($spacing-number * 3) !important;
+  }
+}
+.profile-phone {
+  .noty_message {
+    padding: ($spacing-number * 2) !important;
+  }
+}
+.noty_bar {
+  color: $color-text-black;
+  border-radius: 		 0;
+  -webkit-border-radius: 0;
+  border: 0;
+  border-left: 16px solid $color-alert-bg-default;
+}
+.noty_message {
+	padding: ($spacing-number * 3) ($spacing-number * 4) !important;
+}
+.noty_text {
+    font-family: $font-family-bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+.noty_type_success {
+	border-color: $color-success;
+	background-color: $color-alert-bg-success; 
+}
+.noty_type_error {
+  	border-color: $color-danger;
+	background-color: $color-alert-bg-danger;
+}
+.noty_type_warning {
+  	border-color: $color-warning; 
+	background-color: $color-alert-bg-warning;
+}
+.noty_type_info {
+  	border-color: $color-info;
+	background-color: $color-alert-bg-info;	 
+}
+
+/* Errors onderaan  bijvoorbeeld als validation feedback, zie CBP ervaring */
+ul#noty_bottomCenter_layout_container
+{
+	bottom: 9px !important;
+	width: 50% !important;
+}
+
+ul#noty_bottomCenter_layout_container li
+{
+  background: #fff !important;
+  border: 0 !important;
+  width: 100% !important;
+  border-radius: 		 0 !important;
+  -webkit-border-radius: 0 !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.55) 0px 0px 17px 0px !important;
+  box-shadow: 		  rgba(0, 0, 0, 0.55) 0px 0px 17px 0px !important;
+}
+
+
+/******************** Notificatie voor autosave ***********************/
+
+ul#noty_topRight_layout_container {
+  top: 86px !important;
+  right: 32px !important;
+  width: auto !important;
+
+  li {
+    border: 0 !important;
+    background: #ebebeb !important;
+    box-shadow: none !important;
+    width: auto !important;
+    border-radius: 0 !important;
+    padding: 8px 16px;
+  }
+  .noty_type_success {
+    border: 0;
+    padding-left: 50px;
+    background: url(../../../img/succes.gif) 0 0 no-repeat;
+    background-size: 20px;
+    .noty_message {
+      padding: 0 !important;
+      line-height: 13px !important;
+      color: $color-success;
+    }
+  }					
+
+  .noty_type_error {
+    border: 0;
+    padding-left: 50px;
+    background: url(../../../img/error.gif) 0 0 no-repeat;
+    background-size: 20px;
+    .noty_message {
+      padding: 0 !important;
+      line-height: 13px !important;
+      color: $color-danger;
+    }
+  }
+}
+
+.profile-phone,
+.profile-tablet {
+  ul#noty_topRight_layout_container {
+    top: 20px !important;
+    right: 12px !important;
+    width: auto !important;
+    li {
+      width: auto !important;
+    }
+    .noty_type_success {
+      background-size: 36px;
+      padding-left: 44px;
+      .noty_message {
+        line-height: 37px !important;
+      }
+    }
+    .noty_type_error {
+      background-size: 36px;
+      padding-left: 44px;
+      .noty_message {
+        line-height: 37px !important;
+      }
+    }
+  }
+}

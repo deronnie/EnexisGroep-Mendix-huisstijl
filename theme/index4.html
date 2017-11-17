@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Enexis huisstijl app</title> <!-- change appname here -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="apple-mobile-web-app-title" content="Enexis huisstijl app"> <!-- change appname here -->
+        <meta name="application-name" content="Enexis huisstijl app"> <!-- change appname here -->
+        <meta name="msapplication-TileColor" content="#222B53">
+        <meta name="theme-color" content="#222B53">
+        
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?636402159815254358">
+        <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css?636402159815254358">
+        <link rel="stylesheet" href="styles/font-awesome/glyphicon-to-FA.css?636402159815254358">
+        <link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?636402159815254358">
+        <link rel="stylesheet" href="styles/css/lib/lib.css?636402159815254358">
+        <link rel="stylesheet" href="styles/css/login.css?636402159815254358">	
+    </head>
+    <body>
+        <div class="center-container">
+            <form id="loginForm" class="login-form">
+                <div class="login-logo"></div>
+                <!-- <a id="ssoButton" href="/openid/login" class="login-sso-button btn btn-primary">Sign in with your Mendix account</a>
+
+                <label class="login-or-label">&ndash; or &ndash; </label> -->
+
+                <div class="login-form-inputs well">
+                    <!-- <label class="login-local-label">Sign in with a local account</label> -->
+                    <div id="loginMessage" class="alert alert-danger login-message"></div>
+					<div id="loginMessage" class="alert alert-danger login-message">x</div>
+
+                    <div class="form-group">
+                        <label id="usernameLabel" for="usernameInput">Gebruikersnaam</label>
+                        <input id="usernameInput" class="form-control" type="text" placeholder="Gebruikersnaam" autocorrect="off" autocapitalize="none">
+                    </div>
+                    <div class="form-group">
+                        <label id="passwordLabel" for="passwordInput">Wachtwoord</label>
+                        <input id="passwordInput" class="form-control" type="password" placeholder="Wachtwoord" autocorrect="off" autocapitalize="none">
+                    </div>
+                    <button id="loginButton" type="submit" class="btn btn-primary">Inloggen</button>
+                </div>
+<!--
+                <div class="login-service">
+	            	<hr class="login-hr" />
+	            	<div class="login-btn-group">
+	            		<a href="#" class="btn btn-default col-md-6">Wachtwoord vergeten?</a>
+	            		<a href="#" class="btn btn-default col-md-6">Nog geen account?</a>
+	            	</div>
+            	</div> -->
+			</form>
+        </div>
+
+        <script src="styles/sass/lib/js/login_i18n.js?{{cachebust}}"></script>
+        <script src="js/login.js?{{cachebust}}"></script>
+        
+    </body>
+</html>

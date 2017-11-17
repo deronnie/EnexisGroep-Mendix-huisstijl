@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Profile Header
+========================================================================== */
+.profileheader {
+	margin: ($spacing-number * 2) 0;
+
+	.profileheader-content {
+		padding: 0 $spacing-number;
+	}
+
+	.profileheader-image {
+		display: block;
+		margin: auto auto $spacing-number auto;
+	}
+}
+ 

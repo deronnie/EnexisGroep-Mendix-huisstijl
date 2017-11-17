@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Buttons 
+
+   Default Bootstrap and Mendix Buttons
+========================================================================== */
+.btn,
+.mx-button {
+
+    /* MXID / Bootstrap values for when used in non-mendix apps */
+    display: inline-block;
+    margin: $spacing-number ($spacing-number / 2) $spacing-number 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    @include font(bold);
+    
+    transition: all .2s ease-in-out;
+
+    min-width: 40px;
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+    height: 40px;
+    padding: $spacing-number ($spacing-number * 3);
+    background-color: $color-btn-bg-default;
+    color: $color-btn-text-default;
+    text-shadow: none;
+    font-size: $font-btn-size;
+    text-transform: $font-btn-transform;
+    line-height: 35px;
+
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        background-color: $color-default;
+        border-color: $color-default;
+        box-shadow: none;
+        text-shadow: none;
+        outline: none !important;
+        color: $color-btn-text-white;
+    }
+    &:focus {
+        background-color: $color-btn-bg-default;
+        color: $color-btn-text-default;
+    }
+}
+
+// Mendix button link
+.mx-link {
+    padding: 0;
+    color: $color-link;
+
+    .glyphicon {
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+
+        color: $color-link;
+    }
+    a {
+        color: inherit;
+    }
+    // Improve readability when focused and also mouse hovered in all browsers
+    &:active *, 
+    &:hover *, 
+    &.hover * {
+         -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+
+        color: $color-link-hover; 
+    }
+}
+
+// Images in buttons
+.btn,
+.mx-button,
+.mx-link {
+    img {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+// IE 8 only (mxui overwrites)
+.dj_ie8 .mx-link {
+    margin-right: 0;
+    white-space: normal;
+}
+
+
+// Buttons Alternate Style
+.btn-default {
+    @include button-variant($color-btn-text-default, $color-btn-bg-default, $color-btn-border-default);
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $color-btn-text-primary;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus {
+       color: $color-btn-text-default;
+       background-color: $color-btn-bg-default;
+       border-color: $color-btn-border-default;
+    }
+
+}
+.card .card .btn-default {
+    color: $color-btn-text-default;
+    background-color: $color-layout-bg-white;
+    border-color: $color-layout-bg-white;
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        color: $color-btn-text-primary;
+        background-color: $color-btn-bg-primary;
+        border-color: $color-btn-border-primary;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus {
+        color: $color-btn-text-default;
+        background-color: $color-layout-bg-white;
+        border-color: $color-layout-bg-white;
+    }
+}
+.btn-primary {
+    @include button-variant($color-btn-text-primary, $color-btn-bg-primary, $color-btn-border-primary);
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $color-default;
+        border-color: $color-default;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus {
+        color: $color-btn-text-primary;
+        background-color: $color-btn-bg-primary;
+        border-color: $color-btn-border-primary;
+    }
+}
+.btn-inverse {
+    @include button-variant($color-btn-text-inverse, $color-btn-bg-inverse, $color-btn-border-inverse);
+    &:hover,
+    &.hover,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-color: $color-default;
+        color: $color-text-white;
+    }
+    &:focus {
+        color: $color-btn-text-inverse;
+        background-color: $color-btn-bg-inverse;
+        border-color: $color-btn-border-inverse;
+    }
+}
+// Success appears as green
+.btn-success {
+    @include button-variant($color-btn-text-success, $color-btn-bg-success, $color-btn-border-success);
+    &:focus {
+        color: $color-btn-text-success;
+        background-color: $color-btn-bg-success;
+        border-color: $color-btn-border-success;
+    }
+}
+// Info appears as blue-green
+.btn-info {
+    @include button-variant($color-btn-text-info, $color-btn-bg-info, $color-btn-border-info);
+    &:focus {
+        color: $color-btn-text-info;
+        background-color: $color-btn-bg-info;
+        border-color: $color-btn-border-info;
+    }
+}
+// Warning appears as orange
+.btn-warning {
+    @include button-variant($color-btn-text-warning, $color-btn-bg-warning, $color-btn-border-warning);
+    &:focus {
+        color: $color-btn-text-warning;
+        background-color: $color-btn-bg-warning;
+        border-color: $color-btn-border-warning;
+    }
+}
+// Danger and error appear as red
+.btn-danger {
+    @include button-variant($color-btn-text-danger, $color-btn-bg-danger, $color-btn-border-danger);
+    &:focus {
+        color: $color-btn-text-danger;
+        background-color: $color-btn-bg-danger;
+        border-color: $color-btn-border-danger;
+    }
+}
+.btn-white {
+    @include button-variant($color-btn-text-white, $color-btn-bg-white, $color-btn-border-white);
+    &:focus {
+        color: $color-btn-text-white;
+        background-color: $color-btn-bg-white;
+        border-color: $color-btn-border-white;
+    }
+}
+.btn-secondary {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    background: transparent;
+    &:focus {
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        background: transparent;
+    }
+    &:hover,
+    &.hover,
+    &:active,
+    &.active,
+    &:active:focus,
+    &:hover:focus {
+        color: $color-default;
+        border: 1px solid $color-default;
+        background: transparent;
+    }
+    &.disabled {
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        background: transparent;
+        opacity: 0.5;
+    }
+
+}
+// Button as link but with padding 
+.btn-link {
+    @include font(bold);
+    border: 0;
+    background-color: transparent;
+    color: $color-link;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-link-hover;
+        text-decoration: none;
+    }
+    &:focus {
+        @extend .btn-link;
+    }
+}
+.btn-link.btn-primary {
+    color: $color-primary;
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $color-primary;
+    }
+}
+/* Buttons appear disabled */
+.btn-disabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+// Transparent
+.btn-transparent,
+.btn-transparent:hover {
+    border-style: none;
+    background-color: transparent;
+    color: transparent;
+}
+
+.mx-referencesetselector-select-button {
+    @include button-variant($color-btn-text-primary, $color-btn-bg-primary, $color-btn-border-primary);
+    margin-top: 0;
+    margin-right: 1px;
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $color-default;
+        border-color: $color-default;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus {
+        color: $color-btn-text-primary;
+        background-color: $color-btn-bg-primary;
+        border-color: $color-btn-border-primary;
+    }
+}
+
+
+
+// Buttons Sizes
+.btn-lg {
+    padding: $spacing-number ($spacing-number * 2);  // only for buttons
+}
+.btn-sm {
+    font-size: $font-size-small;
+    padding: $spacing-number; 
+}
+.btn-block {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: block;
+}
+
+
+/* Buttons Image */
+.btn-image {
+    padding: 0;
+    border-style: none;
+    background-color: transparent;
+    vertical-align: middle; 
+
+    img {
+        height: auto; // Image set height
+        display: block; // or else the button doesn't get a width 
+        visibility: visible;
+    }
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+
+/* Buttons Position */
+.btn-right {
+    margin-right: 0 !important;
+    margin-left: $spacing-number !important;
+    float: right;
+}
+.btn-left {
+    margin-left: 0 !important;
+    margin-right: $spacing-number !important;
+}
+
+/* Buttons Attached */
+.btn-attached-right {
+    margin-right: 0;
+}
+.btn-attached-left {
+    margin-left: 0;
+}
+.btn-attached-bottom {
+    margin-bottom: 0;
+}
+.btn-attached-top {
+    margin-top: 0;
+}
+
+
+.big-btn {
+    height: 80px !important;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    > .glyphicon {
+        margin-right: ($spacing-number * 2);
+        margin-left: ($spacing-number * 4);
+        top: 7px;
+        min-width: ($spacing-number * 8);
+        font-size: ($spacing-number * 8);
+        color: $color-steun;
+        transition: all .2s ease-in-out;
+    }
+    &:hover > .glyphicon,
+    &.hover > .glyphicon,
+    &:active > .glyphicon {
+        color: $color-btn-text-primary;
+    }
+    &:focus > .glyphicon {
+        color: $color-steun;
+    }
+}
+
+.square-btn {
+    height: 180px !important;
+    width: 220px;
+    text-align: center;
+    white-space: normal;
+    > .glyphicon {
+        font-size: 84px;
+        display: block;
+        line-height: 95px;
+        color: $color-steun;
+        transition: all .2s ease-in-out;
+    }
+    &:hover > .glyphicon,
+    &.hover > .glyphicon,
+    &:active > .glyphicon {
+      color: $color-btn-text-primary;
+    }
+    &:focus > .glyphicon {
+        color: $color-steun;
+    }
+}
+
+.mx-fileinput-upload-button {
+    @include button-variant($color-btn-text-primary, $color-btn-bg-primary, $color-btn-border-primary);
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $color-default;
+        border-color: $color-default;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus {
+        color: $color-btn-text-primary;
+        background-color: $color-btn-bg-primary;
+        border-color: $color-btn-border-primary;
+    }
+}
+
+
+.profile-phone,
+.profile-tablet {
+    .btn,
+    .mx-button {
+        min-width: 44px;
+        height: 44px;
+        padding: 12px 14px;
+        line-height: 18px !important;
+        font-size: $m-font-size-base;
+    }
+    .big-btn {
+        height: 72px !important;
+    }
+
+    .square-btn {
+        height: 136px !important;
+        width: 136px;
+        text-align: center;
+        > .glyphicon {
+            font-size: 40px;
+            display: block;
+            line-height: 56px;
+        }
+    }
+}

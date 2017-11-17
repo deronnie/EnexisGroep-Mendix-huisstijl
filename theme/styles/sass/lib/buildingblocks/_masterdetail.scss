@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Master Detail Listview
+========================================================================== */
+.masterdetail-listview {
+	background-color: $color-layout-bg-white;
+	.mx-listview {
+		height: 100%;
+		margin: 0;
+		.mx-listview-item { 
+			background-color: transparent;
+
+			&.selected {
+				color: $color-text-white;
+				.mx-link {
+					color: $color-text-white;
+				}
+				
+				&:hover,
+				&:active {
+					background-color: $color-grid-bg-selected !important;
+				}
+			}
+		}
+	}
+}
+
+
+.card .dialoogContainer {
+	textarea {
+	    height: 70px !important;
+	    margin-bottom: ($spacing-number / 2);
+	    &.form-control {
+			padding-top: ($spacing-number / 2);
+		}
+	}
+	.mx-listview-empty {
+		display: none;
+		visibility: hidden;
+	}
+	.dialoogNaam {
+		padding-left: 0;
+		font-size: 16px;
+		color: $color-default;
+	}
+	.dialoogDatum {
+		color: $color-default;
+	    text-align: right;
+	    padding: 0;
+	    font-size: 14px;
+	    float: right;
+	}
+	.dialoogTekst {
+		display: block;
+	    padding-top: ($spacing-number / 2);
+	    line-height: 24px;
+	}
+	.mx-listview {
+		.mx-listview-list li {
+			border: none;
+			position: relative;
+		    margin: 24px 0 -2px 0;
+		    padding: $spacing-number ($spacing-number * 2);
+		    background: $color-layout-bg-secondary;
+		    -moz-border-radius: ($spacing-number / 2);
+		    border-radius: 		($spacing-number / 2);
+		}
+		.mx-listview-list li:first-child {
+		    margin-top: 0;
+		    -moz-border-radius: ($spacing-number / 2) !important;
+		    border-radius:      ($spacing-number / 2) !important;
+		}
+		.mx-listview-list li:after {
+		    content: "";
+		    position: absolute;
+		    bottom: -14px;
+		    right: 25px;
+		    border-width: 15px 20px 0;
+		    border-style: solid;
+		    border-color: $color-layout-bg-secondary transparent;
+		    display: block;
+		    width: 0;
+		}
+		.mx-listview-list li:last-child {
+		    margin-bottom: 18px;
+		}
+	}
+	.mx-listview-loadMore {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.card .card {
+	.dialoogContainer .mx-listview .mx-listview-list li {
+		background: $color-layout-bg-white;
+	}
+	.dialoogContainer .mx-listview .mx-listview-list li:after {
+	    border-color: $color-layout-bg-white transparent;
+	}
+}

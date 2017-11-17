@@ -1,0 +1,576 @@
+//== Step 1: 
+//
+//## To get the quickest changes in your theme adjust the basic theme colors defined below.
+
+// Theme Colors
+$color-default: 						#222B53 !default;
+$color-primary: 						#D8127D !default;	
+$color-inverse: 						#EBEBEB !default;
+$color-steun: 							#B2CF39 !default; 
+$color-info: 		 					#24A89A !default;
+$color-success: 						#008C44 !default;
+$color-warning: 						#F9A000 !default;
+$color-danger: 							#D4252B !default;
+
+// Gray shades
+$gray-darker:							#EBEBEB !default;
+$gray-dark:								#EBEBEB !default;
+$gray:									#EBEBEB !default;
+$gray-light:							#EBEBEB !default;
+$gray-lighter:							#EBEBEB !default;
+$gray-primary:							#EBEBEB !default;
+
+
+// Basic Text colors
+$color-text-black:			            #5F605F !default;
+$color-text-white:			            #FFF !default;
+
+
+
+//== Step 2: 
+//
+//## Settings for some of the most global styles.
+
+//== Background settings
+// Background color for `<body>` also used as utility class.
+$color-layout-bg:						#F4F4F4 !default;
+$color-layout-bg-secondary:				#EBEBEB !default;
+// Background color for specefic pages like the dashboard also used as utility class.
+$color-layout-bg-white:					#FFF !default;
+
+//== Layout settings
+// default spacing number
+$spacing-number:						4px !default;
+// Topbar 
+$color-topbar-bg: 						$color-layout-bg-white !default;
+$minimalheight-topbar:					55px !default;
+// Sidebar 
+$color-sidebar-bg: 						$color-layout-bg-white !default;
+// Mobile header
+$m-height-header:						50px !default;
+// Background Color
+$m-color-header-bg: 					$color-layout-bg-white !default;
+
+
+//== Basic text settings
+// Base font color and size on '<body>'.
+$font-size-base:        				18px !default;
+$m-font-size-base:						16px !default;
+$font-color-base:						$color-text-black !default;
+$line-height-base:      				1.3em !default;
+$font-spacing:							0 !default;
+
+
+// Button Text Size
+$font-btn-size:							14px !default;
+$font-btn-transform:					uppercase !default;
+
+// Global Link Color
+$color-link:            				$color-primary !default;
+$color-link-hover:      				$color-default !default;
+
+
+//== Global widget settings
+// The default border color used by all widgets.
+$color-border-default:					$color-default !default;
+$color-border-gray-light:				$gray-light !default;
+$color-border-white:					$color-text-white !default;
+
+
+//== Step 3: 
+//
+//## Advanced layout options
+
+$default-spacing-top:					($spacing-number * 2) !default;
+$default-spacing-right:					($spacing-number * 3) !default;
+$default-spacing-bottom:				($spacing-number * 2) !default;
+$default-spacing-left:					($spacing-number * 3) !default;
+
+$t-default-spacing-top:					($spacing-number * 2) !default;
+$t-default-spacing-right:				($spacing-number * 2) !default;
+$t-default-spacing-bottom:				($spacing-number * 2) !default;
+$t-default-spacing-left:				($spacing-number * 2) !default;
+
+$m-default-spacing-top:					$spacing-number !default;
+$m-default-spacing-right:				$spacing-number !default;
+$m-default-spacing-bottom:				$spacing-number !default;
+$m-default-spacing-left:				$spacing-number !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+@font-face {
+	font-family: 'Agenda';
+	src: url('../../agenda/Agenda-Light.eot');
+	src: url('../../agenda/Agenda-Light.eot?#iefix') format('embedded-opentype'), url('../../agenda/Agenda-Light.woff') format('woff'), url('../../agenda/Agenda-Light.ttf') format('truetype'), url('../../agenda/Agenda-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Agenda_bold';
+	src: url('../../agenda/Agenda-Bold.eot');
+	src: url('../../agenda/Agenda-Bold.eot?#iefix') format('embedded-opentype'), url('../../agenda/Agenda-Bold.woff') format('woff'), url('../../agenda/Agenda-Bold.ttf') format('truetype'), url('../../Agenda-Bold.woff2') format('woff2');
+}
+// Font Family					
+$font-family-base:						Agenda !default;//"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-light:						Agenda !default;//"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-semibold:					Agenda_bold !default;//"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-bold:						Agenda_bold !default;//"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Font Weight
+$font-weight-light:						normal !default;
+$font-weight-normal:					normal !default; 		
+$font-weight-semibold:					normal !default;
+$font-weight-bold:						normal !default; 
+
+$font-weight-headers:					$font-weight-normal !default;
+
+// Font Size
+$font-size-large:       				20px !default; // ~20px
+$font-size-small:        				16px !default; // ~16px
+
+// Font Size Header
+$font-size-h1:          				24px !default;
+$font-size-h2:          				20px !default;
+$font-size-h3:          				20px !default;
+$font-size-h4:          				20px !default;
+$font-size-h5:          				18px !default;
+$font-size-h6:          				18px !default;
+
+// Mobile Font Size Headers
+$m-font-size-h1:          				24px !default;
+$m-font-size-h2:          				20px !default;
+$m-font-size-h3:          				20px !default;
+$m-font-size-h4:          				20px !default;
+$m-font-size-h5:          				18px !default;
+$m-font-size-h6:          				18px !default;
+
+//== Color variations
+//
+//## 
+// Text Colors
+$color-text-black-secondary:            $color-default !default;
+$color-text-black-disabled:				rgba($color-text-black, .26) !default;
+$color-text-black-hint:                 rgba($color-text-black, .26) !default;
+
+$color-text-white-secondary:            rgba($color-text-white, .7) !default;
+$color-text-white-disabled:             rgba($color-text-white,	.3) !default;
+$color-text-white-hint:                 rgba($color-text-white,	.3) !default;
+
+// Color Variations
+$color-default-darker: 					shade($color-default,40) !default;	
+$color-default-dark: 					shade($color-default,26) !default;	
+$color-default-light: 					tint($color-default,40) !default;	
+$color-default-lighter: 				#d0d3db !default;	
+
+$color-inverse-darker: 					shade($color-inverse,40) !default;	
+$color-inverse-dark: 					shade($color-inverse,26) !default;	
+$color-inverse-light: 					tint($color-inverse,40) !default;	
+$color-inverse-lighter: 				tint($color-inverse,80) !default;	
+
+$color-primary-darker: 					shade($color-primary,40) !default;	
+$color-primary-dark: 					shade($color-primary,26) !default;	
+$color-primary-light: 					#f5bedc !default;	
+$color-primary-lighter: 				#e24f9f !default;	
+
+$color-info-darker: 					shade($color-info,40) !default;	
+$color-info-dark: 						shade($color-info,26) !default;	
+$color-info-light: 						tint($color-info,40) !default;	
+$color-info-lighter: 					#def2f0 !default;	
+
+$color-success-darker: 					shade($color-success,40) !default;	
+$color-success-dark: 					shade($color-success,26) !default;	
+$color-success-light: 					tint($color-success,40) !default;	
+$color-success-lighter: 				#d9eee3 !default;	
+
+$color-warning-darker: 					shade($color-warning,40) !default;	
+$color-warning-dark: 					shade($color-warning,26) !default;	
+$color-warning-light: 					tint($color-warning,40) !default;	
+$color-warning-lighter: 				#fef1d9 !default;	
+
+$color-danger-darker: 					shade($color-danger,40) !default;	
+$color-danger-dark: 					shade($color-danger,26) !default;	
+$color-danger-light: 					tint($color-danger,40) !default;	
+$color-danger-lighter: 					#f9dfdf !default;
+
+
+
+//== Forms
+//
+//##
+
+// Label  
+$color-label:							$color-text-black-secondary !default;		
+$font-weight-label:						$font-weight-normal !default;			 
+
+// Input Color
+$color-input-bg:						$color-layout-bg-white !default;
+$color-input-bg-focus:					$color-layout-bg-white !default;
+$color-input-bg-disabled:				$color-layout-bg !default;
+$color-input-text: 						$font-color-base !default;
+$color-input-text-focus:				$color-default !default;
+$color-input-text-disabled:				$color-input-text !default;
+$color-input-placeholder-text:			$gray-light !default;
+$color-input-border:					$color-border-default !default;
+$color-input-border-focus:				$color-primary !default;
+$color-input-border-disabled:			$color-text-black !default;
+
+// Input Height
+$input-height:							36px !default;
+
+
+//== Alerts
+//
+//##
+
+// Background Color
+$color-alert-bg-default:				$color-default-lighter !default;
+$color-alert-bg-info: 					$color-info-lighter !default;
+$color-alert-bg-success: 				$color-success-lighter !default;
+$color-alert-bg-warning: 				$color-warning-lighter !default;
+$color-alert-bg-danger: 				$color-danger-lighter !default;
+
+
+//== Buttons
+//
+//## For each buttons, define text, background and border color.
+
+// Background Color
+$color-btn-bg-default: 					$gray !default;	
+$color-btn-bg-inverse: 					$color-inverse !default;	
+$color-btn-bg-primary: 					$color-primary !default; 
+$color-btn-bg-info: 					$color-info !default; 
+$color-btn-bg-success: 					$color-success !default; 
+$color-btn-bg-warning: 					$color-warning !default;
+$color-btn-bg-danger: 					$color-danger !default; 	
+$color-btn-bg-white: 					$color-text-white !default; 
+
+// Text Color
+$color-btn-text-default: 				$color-default !default;
+$color-btn-text-inverse: 				$color-default !default;
+$color-btn-text-primary: 				$color-text-white !default;
+$color-btn-text-info: 					$color-text-white !default;
+$color-btn-text-success: 				$color-text-white !default;
+$color-btn-text-warning: 				$color-text-white !default;
+$color-btn-text-danger: 				$color-text-white !default;
+$color-btn-text-white: 					$color-text-white !default; 
+
+// Border Color
+$color-btn-border-default: 				$gray !default;
+$color-btn-border-inverse: 				$color-inverse !default;
+$color-btn-border-primary: 				$color-primary !default;
+$color-btn-border-info: 				$color-info !default;
+$color-btn-border-success: 				$color-success !default;
+$color-btn-border-warning: 				$color-warning !default;
+$color-btn-border-danger: 				$color-danger !default;
+$color-btn-border-white: 				$color-text-white !default; 
+
+
+
+//== Dataview
+//
+//##
+
+// Colors
+$color-dataview-controls-bg: 			$gray !default;
+$color-dataview-controls-border: 		$color-border-default !default;
+$color-dataview-emptymessage-bg:		$color-layout-bg !default;
+$color-dataview-emptymessage-text:		$font-color-base !default;
+
+
+
+//== Grids
+//
+//##
+
+// Paging Color
+$color-grid-paging-bg:					transparent !default;
+$color-grid-paging-bg-hover:			transparent !default;
+$color-grid-paging-border:				transparent !default;
+$color-grid-paging-border-hover:		transparent !default;
+$color-grid-paging-text: 				$color-default !default;
+$color-grid-paging-text-hover:			$color-primary !default;
+
+// Border Color
+$color-grid-border: 					$color-border-default !default;
+
+// Background Color
+$color-grid-bg:							$color-layout-bg-white !default;
+$color-grid-bg-header:					transparent !default; // Grid Headers
+$color-grid-bg-hover: 					$color-primary-light !default;
+$color-grid-bg-selected: 				$color-primary !default;	
+$color-grid-bg-selected-hover: 			$color-primary-lighter !default;
+$color-grid-text-hover:					#000 !default;
+$color-grid-text-selected:				$color-text-white !default;
+
+// Striped 
+$color-grid-bg-striped: 				$color-layout-bg !default;
+
+// Footer
+$color-grid-footer-bg: 					$gray-primary !default;
+
+
+
+//== Groupbox
+//
+//##
+
+// Background Color
+$color-groupbox-default: 				$gray !default;
+$color-groupbox-inverse: 				$color-inverse !default; 
+$color-groupbox-primary: 				$color-primary !default; 
+$color-groupbox-info: 					$color-info !default;
+$color-groupbox-success: 				$color-success !default; 
+$color-groupbox-warning: 				$color-warning !default;
+$color-groupbox-danger: 				$color-danger !default; 	
+$color-groupbox-white: 					#FFF !default;
+
+// Text Color
+$color-groupbox-text-default: 			$color-default !default;
+$color-groupbox-text-inverse: 			$color-text-white !default;
+$color-groupbox-text-primary: 			$color-text-white !default;
+$color-groupbox-text-info: 				$color-text-white !default;
+$color-groupbox-text-success: 			$color-text-white !default;
+$color-groupbox-text-warning: 			$color-text-white !default;
+$color-groupbox-text-danger: 			$color-text-white !default;
+$color-groupbox-text-white: 			$font-color-base !default;
+
+
+
+//== Callout (groupbox) Colors
+//
+//##
+
+// Text and Border Color
+$color-callout-info:					$color-info !default;
+$color-callout-success:					$color-success !default;
+$color-callout-warning:					$color-warning !default;
+$color-callout-danger:					$color-danger !default;
+
+// Background Color
+$color-callout-bg-info:					$color-info-lighter !default; 
+$color-callout-bg-success:				$color-success-lighter !default; 
+$color-callout-bg-warning:				$color-warning-lighter !default; 
+$color-callout-bg-danger:				$color-danger-lighter !default;
+
+
+
+//== Labels
+//
+//##
+
+// Background Color
+$color-label-bg-default: 				$color-default !default;
+$color-label-bg-primary: 				$color-primary !default; 
+$color-label-bg-info: 					$color-info !default; 
+$color-label-bg-success: 				$color-success !default; 
+$color-label-bg-warning: 				$color-warning !default;
+$color-label-bg-danger: 				$color-danger !default; 	
+
+// Text Color
+$color-label-text-default: 				#FFF !default;
+$color-label-text-primary: 				#FFF !default;
+$color-label-text-info: 				#FFF !default;
+$color-label-text-success: 				#FFF !default;
+$color-label-text-warning: 				#FFF !default;
+$color-label-text-danger: 				#FFF !default;
+
+// Border Color
+$color-label-border-default: 			$color-default !default;
+$color-label-border-primary: 			$color-primary !default;
+$color-label-border-info: 				$color-info !default;
+$color-label-border-success: 			$color-success !default;
+$color-label-border-warning: 			$color-warning !default;
+$color-label-border-danger: 			$color-danger !default;
+
+
+
+
+
+//== Navs
+//
+//##
+
+// Navigation Text Sizes
+$font-navsidebar-size:					$font-size-base !default;
+$font-navtopbar-size:					$font-size-base !default;
+$font-navsidebar-sub-size:				$font-size-small !default;
+$font-navtopbar-sub-size:				$font-size-small !default;
+
+$font-navsidebar-glyph-size:			14px !default;
+$font-navtopbar-glyph-size:				14px !default;
+
+// Navigation sidebar
+$color-navsidebar-bg: 					$color-sidebar-bg !default;
+$color-navsidebar-bg-hover:				lighten($color-navsidebar-bg, 4) !default;
+$color-navsidebar-bg-active:            lighten($color-navsidebar-bg, 8) !default;
+$color-navsidebar-text:					$color-default !default;
+$color-navsidebar-text-hover:			$color-primary !default;
+$color-navsidebar-text-active:			$color-primary !default;
+
+$color-navsidebar-sub-bg: 				darken($color-navsidebar-bg, 4) !default;
+$color-navsidebar-sub-bg-hover:			$color-navsidebar-sub-bg !default;
+$color-navsidebar-sub-bg-active:		$color-layout-bg !default;
+$color-navsidebar-sub-text:				$color-default !default;
+$color-navsidebar-sub-text-hover:		$color-primary !default;
+$color-navsidebar-sub-text-active:		$color-primary !default;
+
+$color-navsidebar-border:				$color-default !default;
+
+// Navigation topbar
+$color-navtopbar-bg: 					$color-topbar-bg !default;
+$color-navtopbar-bg-hover:				$color-topbar-bg !default;
+$color-navtopbar-bg-active:            	$color-topbar-bg !default;
+$color-navtopbar-text:					$color-default !default;
+$color-navtopbar-text-hover:			$color-primary !default;
+$color-navtopbar-text-active:			$color-default !default;
+
+$color-navtopbar-sub-bg: 				lighten($color-navtopbar-bg, 4) !default;
+$color-navtopbar-sub-bg-hover: 			$color-navtopbar-sub-bg !default;
+$color-navtopbar-sub-bg-active: 		$color-navtopbar-sub-bg !default;
+$color-navtopbar-sub-text:				$color-default !default;
+$color-navtopbar-sub-text-hover:		$color-primary !default;
+$color-navtopbar-sub-text-active:		$color-primary !default;
+
+$color-navtopbar-border:				$color-navtopbar-bg-hover !default;
+
+
+
+
+
+//== Tabs
+//
+//##
+
+// Text Color
+$color-tab-text-active: 				$color-default !default;
+$color-tab-text: 						$color-text-black-secondary !default;
+$color-tab-lined-text-active:			$color-primary !default;
+
+// Border Color
+$color-tab-border:						$color-border-default !default;	
+$color-tab-lined-border:				$color-primary !default;
+$color-tab-lined-border-active:			$color-default !default;
+
+// Background Color
+$color-tab-bg-hover: 					$color-primary !default;
+$color-tab-bg-active:					$color-primary !default;
+
+
+
+
+
+//== Modals
+//
+//##
+
+// Background Color
+$color-modal-header-bg: 				transparent !default;
+
+// Border Color
+$color-modal-header-border: 			$color-border-default !default;
+
+// Text Color
+$color-modal-header-text: 				$color-default !default;
+
+
+
+
+
+//== Layouts
+//
+//##
+
+// Scroll container / layout container default padding (if you are using bootstrap containers use a minimal of 15px)
+$padding-layoutcontainer-base:			0px !default; 
+$m-padding-layoutcontainer-base:		0px !default;
+$t-padding-layoutcontainer-base:		0px !default; 
+
+// Combined spacing 
+$default-spacing:						$default-spacing-top $default-spacing-right $default-spacing-bottom $default-spacing-left !default;
+$m-default-spacing:						$m-default-spacing-top $m-default-spacing-right $m-default-spacing-bottom $m-default-spacing-left !default;
+$t-default-spacing:						$t-default-spacing-top $t-default-spacing-right $t-default-spacing-bottom $t-default-spacing-left !default;
+
+
+
+
+
+//== Tables
+//
+//##
+
+// Default Table Spacing
+$padding-table-cell-top:				4px !default;					
+$padding-table-cell-bottom:				4px !default;					
+$padding-table-cell-left:				4px !default;					
+$padding-table-cell-right:				4px !default;			
+
+
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+// Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+// Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+// Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+// Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+// Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+
+
+
+//== Mobile
+//
+//##				
+
+// Text Color
+$m-color-header-text: 					$font-color-base !default;
+
+// Header Link Color
+$m-color-header-link:					$color-link !default;
+
+
+
+//== Mobile Tabs
+//
+//##
+
+// Text Color
+$m-color-tab-text: 						#FFF !default;
+$m-color-tab-text-active: 				#000 !default;
+
+// Background Color
+$m-color-tab-bg:						$color-primary !default;
+$m-color-tab-bg-hover: 					lighten($color-tab-border,5) !default;
+$m-color-tab-bg-active:					darken($m-color-tab-bg, 15) !default;	
+
+// Border Color
+$m-color-tab-border:					darken($m-color-tab-bg, 15) !default;
+$m-color-tab-border-active:				darken($m-color-tab-bg, 15) !default;

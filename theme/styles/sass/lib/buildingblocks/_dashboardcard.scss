@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Dashboard Card
+========================================================================== */
+.dashboardcard {
+	padding: ($spacing-number * 2);
+	margin: 0 0 ($spacing-number * 4) 0;
+	border: 1px solid $color-border-default;
+	background-color: #FFF;
+	border-radius: 3px;
+} 
+.dashboardcard-title {
+	margin-top: 0;
+}
+.dashboardcard-subtitle {
+	font-size: 1.111em;
+	color: $color-text-black-secondary;
+	margin-bottom: $spacing-number;
+}
+.dashboardcard-link {
+	font-size: $font-size-small;
+}
+
+@media only screen and (max-width: 960px) {
+	.dashboardcard {
+		padding: $spacing-number;
+		margin: 0 0 ($spacing-number * 2) 0;
+	}
+}

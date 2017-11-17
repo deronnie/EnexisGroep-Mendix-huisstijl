@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Dataview
+ 
+   Default Mendix Dataview Widget. The data view is used for showing the contents of exactly one object
+========================================================================== */
+
+.mx-dataview {
+
+	/* Control bar */
+	.mx-dataview-controls {
+		border-radius: 0;
+		// Needed to clear the bootstrap columns (get float: left)
+		clear: both;
+		margin: 0;
+    	padding: ($spacing-number * 2) 0;
+		border-top: 5px solid $gray;
+		background-color: transparent;
+		height: 61px;
+		.mx-layoutgrid {
+			padding: 0 $spacing-number;
+		}
+		/* Buttons */
+		.mx-button {
+			margin: 0;
+		}
+		.btn-primary {
+			float: right;
+		}
+	}
+
+	/* Dataview-content gives problems for nexted layout grid containers */
+	> .mx-dataview-content > .mx-container-nested {
+		> .row {
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	/* Dataview empty message */
+    .mx-dataview-message {
+        background: $color-dataview-emptymessage-bg;
+        color:	$color-dataview-emptymessage-text;
+    }
+}
+
+.card .card,
+.mx-tabcontainer .card {
+	.mx-dataview {
+		/* Control bar */
+		.mx-dataview-controls {
+			border-top: 5px solid $color-layout-bg-white;
+			background-color: $gray;
+			/* Buttons */
+			.btn-default {
+				background-color: $color-btn-bg-white;
+				color: $color-default;
+			}
+		}
+	}
+}
+

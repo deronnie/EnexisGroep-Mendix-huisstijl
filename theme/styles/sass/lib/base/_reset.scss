@@ -1,0 +1,83 @@
+.mx-grid,
+.mx-tabcontainer,
+.mx-listview, 
+.mx-templategrid,
+.mx-groupbox {
+	@include default-spacing($type: margin, $direction: bottom, $device: responsive);
+} 
+.mx-scrollcontainer-wrapper {
+	padding: 0;
+}
+
+
+.profile-tablet,
+.profile-phone {
+	.close-btn {
+	    margin: 0;
+	    min-width: 40px !important;
+	    width: 40px !important;
+	    height: 40px !important;
+	    padding: $spacing-number;
+	    &:focus {
+	    	margin: 0;
+	    }
+	    .glyphicon-remove {
+	    	margin-top: -2px;
+	    }
+	}
+}
+
+.mx-layoutcontainer .mx-placeholder {
+	padding: 0;
+	.mx-layoutgrid {
+		@include default-spacing($type: padding, $direction: all, $device: responsive);
+		.mx-layoutgrid {
+			padding: 0;
+
+		}
+	}
+}
+ .profile-phone .mx-layoutcontainer .mx-placeholder {
+	padding: 0;
+	.mx-layoutgrid {
+		@include default-spacing($type: padding, $direction: all, $device: phone);
+		.mx-layoutgrid {
+			padding: 0;
+		}
+	}
+} 
+.profile-tablet .mx-layoutcontainer .mx-placeholder {
+	padding: 0;
+	.mx-layoutgrid {
+		@include default-spacing($type: padding, $direction: all, $device: tablet);
+		.mx-layoutgrid {
+			padding: 0;
+		}
+	}
+}
+.mx-layoutcontainer-wrapper.mx-layoutcontainer-nested {
+	padding: 0;
+}
+
+// Removing default spacing in specific situations
+.pageheader {
+	.mx-grid,
+	.mx-tabcontainer,
+	.mx-listview,
+	.mx-templategrid,
+	.mx-groupbox {
+		margin-bottom: 0;
+	}
+}
+
+// Quick fix
+.profile-phone,
+.profile-tablet {
+	.mx-placeholder > {
+		.mx-tabcontainer:only-child,
+		.mx-grid:only-child {
+			margin-bottom: 0;
+		}
+	}
+}
+

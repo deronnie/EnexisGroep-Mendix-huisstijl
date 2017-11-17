@@ -1,0 +1,586 @@
+/* ==========================================================================
+   Navigation
+ 
+   Default Mendix Navigation Bar
+========================================================================== */
+.mx-navbar { 
+	border-radius: 0;
+	margin: 0;
+	background-color: $color-navtopbar-bg;
+
+	ul.nav { 
+
+		margin: 0; // weird -margin if screen gets small (bootstrap)
+		/* Navigation item */
+		> li.mx-navbar-item > a {
+			@include font(normal);
+			border-radius: 0;
+			padding: ($spacing-number * 2) ($spacing-number * 3);
+			text-decoration: none;
+			margin: 0 ($spacing-number * 2) -5px ($spacing-number * 2);
+			margin-bottom: -5px;
+			border-bottom: 5px solid transparent;
+			color: $color-navtopbar-text;
+			font-size: $font-navtopbar-size;
+			vertical-align: middle;
+			line-height: 1.9em !important;
+
+			/* Dropdown arrow */
+			.caret {
+				border: 0;
+			    height: 34px;
+    			margin: 0 $spacing-number;
+				&:after {
+					font-family: FontAwesome;
+					content:"\f107";
+				}
+			}
+
+			&:hover,
+			&.active:hover {
+				background-color: $color-navtopbar-bg-hover;
+				color: $color-navtopbar-text-hover;
+				text-decoration: none;
+				border-bottom: 5px solid $color-primary;
+			}
+			&.active {
+            	color: $color-navtopbar-text-active !important;
+            	background-color: $color-navtopbar-bg-active;
+            	border-bottom: 5px solid $color-default;
+            }
+
+			/* Dropdown */
+			.mx-navbar-submenu:before {
+				position: absolute;
+				top: -$spacing-number;
+				left: ($spacing-number * 2);
+				width: 0;
+				height: 0;
+				border-width: 0 $spacing-number $spacing-number $spacing-number;
+				border-style: solid;
+				border-color: transparent transparent $color-navtopbar-border transparent;
+				content: "";
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+			}
+
+			// Image
+			img {
+				width: 20px; // Default size (so it looks good)
+				height: auto;
+			}
+
+			.glyphicon {
+					vertical-align: middle;
+					font-size: $font-navtopbar-glyph-size;
+					top: -1px;
+					margin-right: $spacing-number;
+				}
+		}
+		> .mx-navbar-item.active a {
+			color: $color-navtopbar-text-active !important;
+        	background-color: $color-navtopbar-bg-active;
+        	border-bottom: 5px solid $color-default !important;
+		}
+		/* When hovering or the dropdown is open */
+		> .mx-navbar-item > a:hover, 
+		> .mx-navbar-item.open > a, 
+		> .mx-navbar-item.open > a:hover {
+			background-color: $color-navtopbar-bg-hover;
+			color: $color-navtopbar-text-hover;
+			text-decoration: none;
+			border-bottom: 5px solid $color-primary !important;
+
+			.caret {
+				border-top-color: $color-navtopbar-text-hover;
+				border-bottom-color: $color-navtopbar-text-hover;
+			}
+		}
+		> .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem a {
+			padding-left: ($spacing-number * 2);
+			@include font(normal);
+			.glyphicon {
+				margin-right: ($spacing-number * 2);
+			}
+			&:hover {
+				background-color: $color-navtopbar-sub-bg-active;
+				color: $color-navtopbar-sub-text-active;
+				text-decoration: none;
+            }
+        }
+		> .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
+			background-color: $color-navtopbar-sub-bg-active;
+			color: $color-navtopbar-sub-text-active;
+			.caret {
+				border-top-color: $color-navtopbar-sub-text-active;
+				border-bottom-color: $color-navtopbar-sub-text-active;
+			}
+        }
+	}
+
+	@media (max-width: $screen-sm) {
+		ul.nav > li.mx-navbar-item > a {
+			padding: $spacing-number ($spacing-number * 2);
+		}
+		.mx-navbar-item.open .dropdown-menu {
+			background-color: $color-navtopbar-sub-bg;
+			border-radius: 0;
+			padding: 0;
+			
+			> li.mx-navbar-subitem > a {
+				@include font(normal);
+				padding: $spacing-number ($spacing-number * 2);
+				border-radius: 0;
+				color: $color-navtopbar-sub-text;
+				font-size: $font-navtopbar-sub-size;
+
+				&:hover,
+				&.active:hover {
+					color: $color-navtopbar-sub-text-hover;
+					background-color: $color-navtopbar-sub-bg-hover;
+				}
+
+				&.active {
+					color: $color-navtopbar-sub-text-active;
+					background-color: $color-navtopbar-sub-bg-active;
+				}
+			}
+		}
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Navigation Tree
+========================================================================== */
+.mx-navigationtree {
+	background-color: $color-navsidebar-bg;
+
+	/* Every navigation item */
+	.navbar-inner {
+	}
+	.navbar-inner ul {
+		margin: 0;
+		padding-left: 0;
+
+		li {
+		    padding: $spacing-number ($spacing-number * 2) 0 ($spacing-number * 2);
+		    line-height: 51px;
+			border-style: none;
+			&:last-child a {
+				border-bottom: 0;
+			}
+
+			a {
+				@include font(normal);
+				display: block;
+				padding: 0;
+				border-bottom: 1px solid $color-navsidebar-border;
+				border-radius: 0;
+				color: $color-navsidebar-text;
+				text-shadow: none;
+				font-size: $font-navsidebar-size;
+				vertical-align: middle;
+				background-color: $color-navsidebar-bg;
+
+
+				/* Dropdown arrow */
+				.caret {
+					border: 0;
+				    height: 50px;
+	    			margin: 0 $spacing-number;
+					&:after {
+						font-family: FontAwesome;
+						font-weight: 700;
+						content:"\f107";
+					}
+				}
+
+				img {
+					margin-right: ($spacing-number / 2);
+					width: 20px; // Default size (so it looks good)
+					height: auto;
+				}
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-navsidebar-glyph-size;
+					top: -1px;
+					margin-right: 4px;
+				}
+			}
+
+			a:hover,
+			a.active:hover {
+				background-color: $color-navsidebar-bg-hover;
+				color: $color-navsidebar-text-hover;
+				text-decoration: none;
+			}
+
+            a.active {
+            	border-left-color: $color-navsidebar-text-active;
+            	color: $color-navsidebar-text-active;
+            	background-color: $color-navsidebar-bg-active;
+            }
+		}
+	}
+
+	/* Sub navigation item specific */
+	li.mx-navigationtree-has-items {
+		a {
+			border-bottom: 1px solid transparent !important;
+		}
+		&.mx-navigationtree-collapsed a{
+        	border-bottom: 1px solid $color-navsidebar-border !important;
+		}
+
+		> ul {
+			margin: 0;
+			background-color: $color-navsidebar-sub-bg;
+
+			li {
+				margin: 0;
+				padding: 0 ($spacing-number * 2);
+
+				a {
+					@include font(normal);
+					color: $color-navsidebar-sub-text;
+					font-size: $font-navsidebar-sub-size;
+					background-color: $color-navsidebar-sub-bg;
+					border-bottom: 1px solid $color-navsidebar-border !important;
+
+					&:hover,
+					&.active:hover {
+						color: $color-navsidebar-sub-text-hover;
+						background-color: $color-navsidebar-sub-bg-hover;
+					}
+					&.active {
+		            	border: 0;
+		            	color: $color-navsidebar-sub-text-active;
+		            	background-color: $color-navsidebar-sub-bg-active;
+		            }
+				}
+				&:last-child a {
+					border-bottom: 1px solid transparent !important;
+				}
+			}
+		}
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+/* Content Centerd text and icons */
+
+.mx-navigationtree.nav-content-center-text-icons {
+	.navbar-inner ul {
+		a {
+			text-align: center;
+			.glyphicon {
+				display: block;
+  				margin-bottom: ($spacing-number / 2);
+			}
+		}
+	}
+}
+
+/* Content Centerd icons only */
+
+.mx-navigationtree.nav-content-center {
+	.navbar-inner ul {
+		a {
+			text-align: center;
+			.glyphicon {
+
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Simple Menu Bar
+========================================================================== */
+.mx-menubar {
+	padding: 0;
+	background-color: $color-navsidebar-bg;
+	ul.mx-menubar-list {
+		width: 100%;
+		height: 50px;
+		table-layout: fixed;
+		li.mx-menubar-item {
+			margin: 0;
+			width: 100%;
+			display: inline-block;
+			a {
+				@include font(normal);
+				border-radius: 0;
+				color: $color-navsidebar-text;
+				font-size: $font-navsidebar-sub-size;
+				padding: 0 $spacing-number;
+				text-align: center;
+				line-height: 50px;
+				overflow: hidden;
+				display: block;
+				vertical-align: middle;
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-navsidebar-glyph-size;
+					top: -1px;
+				}
+			}
+			a:hover,			
+			&:hover a,
+			&.active a {
+				background-color: $color-navsidebar-bg-hover;
+				color: $color-navsidebar-text-hover;
+				text-decoration: none;
+			}
+			&.active a {
+            	color: $color-navsidebar-text-active;
+            	background-color: $color-navsidebar-bg-active;
+            }
+		}
+	}
+
+	/* Two menu items */
+	&.menubar-col-6 ul.mx-menubar-list li.mx-menubar-item {
+		width: 50%;
+	}
+	/* Three menu items */
+	&.menubar-col-4 ul.mx-menubar-list li.mx-menubar-item {
+		width: 33%;
+	}
+	/* Four menu items */
+	&.menubar-col-3 ul.mx-menubar-list li.mx-menubar-item {
+		width: 25%;
+	}
+	/* Five menu items */
+	&.menubar-col-2 ul.mx-menubar-list li.mx-menubar-item {
+		width: 20%;
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}
+
+/* text and icons centerd */
+.mx-menubar.bottom-nav-text-icons {
+	ul.mx-menubar-list {
+		li.mx-menubar-item {
+			a {
+				line-height: normal;
+		  		padding: $spacing-number $spacing-number 6px $spacing-number;
+				.glyphicon {
+					display: block;
+		  			margin-bottom: ($spacing-number / 2);
+				}
+			}
+		}
+	}
+
+}
+
+/* Vertical variation specifics */
+.mx-menubar-vertical {
+	background-color: $color-navtopbar-bg;
+	ul.mx-menubar-list {
+		li.mx-menubar-item {
+			a {
+				color: $color-navtopbar-text;
+				font-size: $font-navtopbar-size;
+				border-bottom: 1px solid $color-navtopbar-border;
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-navtopbar-glyph-size;
+					top: -1px;
+				}
+
+				&:hover,
+				&.active {
+					background-color: $color-navtopbar-bg-hover;
+					color: $color-navtopbar-text-hover;
+					text-decoration: none;
+				}
+				&.active {
+	            	color: $color-navtopbar-text-active;
+	            	background-color: $color-navtopbar-bg-active;
+	            }
+			}
+		}
+	}
+}
+.footerMenu {
+	background: $color-layout-bg-white;
+    margin-top: -($spacing-number * 2) !important;
+    height: 62px;
+    margin-bottom: -($spacing-number * 4) !important;
+    overflow: hidden;
+    padding: ($spacing-number * 2) ($spacing-number * 3) 0 ($spacing-number * 3) !important;
+	&.SVG {
+		text-align: center;
+		padding: 0 !important;
+		.icon {
+			text-align: center;
+		    padding-top: 6px;
+			span {
+	            position: absolute;
+			    margin-top: -37px;
+			    text-transform: lowercase;
+			    font-size: 14px;
+			    padding-top: 34px;
+			    width: 100%;
+			    line-height: 28px;
+			    color: $color-default;
+			    margin-left: -50%;
+				a {
+					@include font(normal);
+				}
+			}
+			.icon1 {
+				width: 28px;
+		  		height: 28px;
+		  		padding-top: 28px;
+		  		margin: 0 auto;
+				text-align: center;
+				background: url(../../../img/empty-box-open.svg);
+				background-size: cover;
+			}
+			
+			.icon2 {
+				width: 28px;
+		  		height: 28px;
+		  		padding-top: 28px;
+		  		margin: 0 auto;
+				text-align: center;
+				background: url(../../../img/empty-box-open.svg);
+				background-size: cover;
+			}
+			
+			.icon3 {
+				width: 28px;
+		  		height: 28px;
+		  		padding-top: 28px;
+		  		margin: 0 auto;
+				text-align: center;
+				background: url(../../../img/empty-box-open.svg);
+				background-size: cover;
+			}
+			.icon4 {
+				width: 28px;
+		  		height: 28px;
+		  		padding-top: 28px;
+		  		margin: 0 auto;
+				text-align: center;
+				background: url(../../../img/empty-box-open.svg);
+				background-size: cover;
+			}
+			&.active,
+			&:hover,
+			&:active {
+				span a {
+					color: $color-primary;
+				}
+				.icon1 {
+					background: url(../../../img/empty-box-open_active.svg);
+					background-size: cover;
+				}
+				.icon2 {
+					background: url(../../../img/empty-box-open_active.svg);
+					background-size: cover;
+				}
+				.icon3 {
+					background: url(../../../img/empty-box-open_active.svg);
+					background-size: cover;
+				}
+				.icon4 {
+					background: url(../../../img/empty-box-open_active.svg);
+					background-size: cover;
+				}
+			}
+		}
+	}
+
+	&.Icon {
+		text-align: center;
+		padding: 0 !important;
+	    .footerItem {
+	    	.mx-link {
+	    		padding-top: 8px;
+	    		.glyphicon {
+		    		font-size: 24px;
+	    		    margin-bottom: 7px;
+		    		display: block;
+		    		color: $color-default;
+		    	}
+	    	}
+	    	a {
+	    		@include font(normal);
+	    		color: $color-default;
+	    		text-transform: lowercase;
+	    		font-size: 14px;
+	    	}
+	    	&:hover,
+	    	&:active,
+	    	&.active {
+	    		.glyphicon {
+		    		color: $color-link;
+		    	}
+		    	a {
+		    		color: $color-link;
+		    	}
+	    	}
+	    }
+	}
+}
+
+.profile-phone,
+.profile-tablet {
+	.mx-dataview-controls {
+		height: 64px;
+		padding: 6px 0;
+		.mx-button {
+			height: 44px;
+			line-height: 23px;
+		}
+	}
+
+	.footerMenu {
+		height: 64px;
+		&.Icon {
+		    margin-top: -6px !important;
+		    height: 59px;
+		    .footerItem {
+		    	.mx-link {
+	    		    padding-top: 12px;
+					padding-bottom: 6px;
+		    	}
+		    }
+		}
+		&.SVG {
+			margin-top: -6px !important;
+			.icon {
+		    	padding-top: 6px;
+			}
+		}
+	}
+	
+}

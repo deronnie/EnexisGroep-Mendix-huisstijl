@@ -7729,7 +7729,7 @@ h6,
 
 .navlayout-topbar .region-topbar .toggle-btn {
   float: left;
-  margin: 7px 0 0 0;
+  margin: 5px 0 0 0;
   min-width: 40px;
   width: 40px;
   height: 40px;
@@ -7737,7 +7737,7 @@ h6,
 }
 
 .navlayout-topbar .region-topbar .back-btn-holder {
-  margin: 7px 0 0 0;
+  margin: 5px 0 0 0;
   float: left;
 }
 

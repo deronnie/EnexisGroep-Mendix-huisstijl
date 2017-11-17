@@ -103,9 +103,12 @@
 	.wizard-step-number {
 		width: 50px;
 		height: 50px;
-		font-size: ($spacing-number * 2);
+		font-size: ($spacing-number * 4);
 		line-height: 50px;
 		
+	}
+	.wizard-step .wizard-step-title {
+		height: 42px;
 	}
 }
 
@@ -325,7 +328,7 @@
 		    border-top-color: #EBEBEB;
 		    border-left-color: transparent;
 		    bottom: -25px;
-		    border-width: 14px 22px;
+		    border-width: 14px 18px;
 		    top: inherit;
 		    left: 75%;
 		}

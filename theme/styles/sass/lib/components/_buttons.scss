@@ -435,16 +435,12 @@
 
 .profile-phone,
 .profile-tablet {
-    .btn,
-    .mx-button {
-        min-width: 44px;
-        height: 44px;
-        padding: 12px 14px;
-        line-height: 18px !important;
-        font-size: $m-font-size-base;
-    }
+
     .big-btn {
         height: 72px !important;
+        & > .glyphicon {
+            top: 4px;
+        }
     }
 
     .square-btn {

@@ -373,7 +373,7 @@ textarea.form-control, textarea.readonly-input {
 .profile-phone .select2-search--dropdown .select2-search__field,
 .profile-tablet .select2-container--default .select2-selection--single,
 .profile-tablet .select2-search--dropdown .select2-search__field {
-  height: 44px;
+  height: 36px;
   font-size: 16px;
 }
 
@@ -2002,20 +2002,14 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
   border-color: #D8127D;
 }
 
-.profile-phone .btn,
-.profile-phone .mx-button,
-.profile-tablet .btn,
-.profile-tablet .mx-button {
-  min-width: 44px;
-  height: 44px;
-  padding: 12px 14px;
-  line-height: 18px !important;
-  font-size: 16px;
-}
-
 .profile-phone .big-btn,
 .profile-tablet .big-btn {
   height: 72px !important;
+}
+
+.profile-phone .big-btn > .glyphicon,
+.profile-tablet .big-btn > .glyphicon {
+  top: 4px;
 }
 
 .profile-phone .square-btn,
@@ -2126,7 +2120,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
 .mx-grid .mx-grid-searchbar .mx-button {
   background-color: #FFF;
-  height: 32px;
+  height: 39px;
   line-height: 28px;
   margin: 2px;
 }
@@ -6428,8 +6422,12 @@ h6,
 .profile-phone .wizard .wizard-step-number {
   width: 50px;
   height: 50px;
-  font-size: 8px;
+  font-size: 16px;
   line-height: 50px;
+}
+
+.profile-phone .wizard .wizard-step .wizard-step-title {
+  height: 42px;
 }
 
 /* ==========================================================================
@@ -6658,7 +6656,7 @@ h6,
   border-top-color: #EBEBEB;
   border-left-color: transparent;
   bottom: -25px;
-  border-width: 14px 22px;
+  border-width: 14px 18px;
   top: inherit;
   left: 75%;
 }
@@ -7580,7 +7578,7 @@ h6,
   position: relative;
   float: right;
   z-index: 1;
-  top: 10px;
+  top: 5px;
   margin-right: 8px;
   padding-top: 7px;
   color: #222B53;
@@ -7730,23 +7728,23 @@ h6,
 .navlayout-topbar .region-topbar .toggle-btn {
   float: left;
   margin: 5px 0 0 0;
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
+  min-width: 38px;
+  width: 38px;
+  height: 38px;
   padding: 4px;
 }
 
 .navlayout-topbar .region-topbar .back-btn-holder {
-  margin: 5px 0 0 0;
+  margin: 3px 0 0 0;
   float: left;
 }
 
 .navlayout-topbar .region-topbar .back-btn-holder .back-btn {
   margin: 0;
-  min-width: 40px;
+  min-width: 38px;
   padding: 4px;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
 }
 
 .menuHeader {
@@ -7905,7 +7903,6 @@ h6,
 .profile-tablet .form-disabled p, .form-disabled
 .profile-tablet p {
   font-size: 16px;
-  height: 44px;
 }
 
 .profile-phone .form-control-static, .profile-phone .form-group div[class*='textBox'] > label, .form-group .profile-phone div[class*='textBox'] > label, .profile-phone
@@ -7934,7 +7931,7 @@ h6,
 
 .profile-phone .radio label,
 .profile-tablet .radio label {
-  line-height: 28px;
+  line-height: 20px;
 }
 
 /*

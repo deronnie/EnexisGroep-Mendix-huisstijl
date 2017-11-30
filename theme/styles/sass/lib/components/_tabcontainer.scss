@@ -51,6 +51,8 @@
 	}
 	.mx-tabcontainer-content {
 		background-color: $color-layout-bg-white;
+		border: 5px solid $color-layout-bg-white;
+		margin-top:1px;
 	}
 	.formblock-header,
 	.sectionheader {
@@ -134,14 +136,8 @@
 			}
 		}
 		.mx-tabcontainer-content {
-			background-color: $color-layout-bg-secondary;
-			.btn-default {
-	  			background-color: $color-layout-bg-white;
-		  		&:hover,
-		  		&:active {
-		  			background-color: $color-btn-bg-primary;
-		  		}
-	  		}
+			background-color: $color-layout-bg-white;
+			border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
 		}
 		.card,
 		.mx-grid-searchbar {
@@ -216,10 +212,11 @@
 			}
 		}
 		.mx-tabcontainer-content {
-			background-color: $color-layout-bg-secondary;
+			background-color: $color-layout-bg-white;
+			border: 5px solid $color-layout-bg-secondary;
 		}
 		.card {
-			background-color: $color-layout-bg-white;
+			background-color: $color-layout-bg-secondary;
 			.mx-grid-searchbar {
 	  			background-color: $color-layout-bg-secondary;
 	  			.mx-button {
@@ -322,6 +319,7 @@
 			}
 			.mx-tabcontainer-content {
 				background-color: $color-layout-bg-white;
+				border-color: $color-layout-bg-secondary $color-layout-bg-secondary transparent $color-layout-bg-secondary;
 				.btn-default {
 		  			background-color: $color-layout-bg-secondary;
 			  		&:hover,
@@ -462,12 +460,23 @@
                 color: $color-tab-text-active;
             }
         }
+        .mx-tabcontainer-content {
+			background-color: $color-layout-bg-white;
+			border: 5px solid $color-layout-bg-white;
+			margin-top:1px;
+		}
         > li.active > a:focus {
 			border-width: 0 0 5px 0;
 		}
     }
 }
-
+.card .tab-lined.mx-tabcontainer {
+    .mx-tabcontainer-content {
+		background-color: $color-layout-bg-white;
+		border: 5px solid $color-layout-bg-white;
+		margin-top:1px;
+	}
+}
 
 
 /* ==========================================================================
@@ -520,4 +529,3 @@
 		}
 	}
 }
-

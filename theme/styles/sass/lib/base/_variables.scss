@@ -5,7 +5,7 @@
 // Theme Colors
 $color-default: 						#222B53 !default;
 $color-primary: 						#D8127D !default;	
-$color-inverse: 						#EBEBEB !default;
+$color-inverse: 						#E0E0E0 !default;
 $color-steun: 							#B2CF39 !default; 
 $color-info: 		 					#24A89A !default;
 $color-success: 						#008C44 !default;
@@ -13,12 +13,12 @@ $color-warning: 						#F9A000 !default;
 $color-danger: 							#D4252B !default;
 
 // Gray shades
-$gray-darker:							#EBEBEB !default;
-$gray-dark:								#EBEBEB !default;
-$gray:									#EBEBEB !default;
-$gray-light:							#EBEBEB !default;
-$gray-lighter:							#EBEBEB !default;
-$gray-primary:							#EBEBEB !default;
+$gray-darker:							#CCCCCC !default;
+$gray-dark:								#E0E0E0 !default;
+$gray:									#E0E0E0 !default;
+$gray-light:							#E0E0E0 !default;
+$gray-lighter:							#E0E0E0 !default;
+$gray-primary:							#E0E0E0 !default;
 
 
 // Basic Text colors
@@ -34,7 +34,7 @@ $color-text-white:			            #FFF !default;
 //== Background settings
 // Background color for `<body>` also used as utility class.
 $color-layout-bg:						#F4F4F4 !default;
-$color-layout-bg-secondary:				#EBEBEB !default;
+$color-layout-bg-secondary:				#E0E0E0 !default;
 // Background color for specefic pages like the dashboard also used as utility class.
 $color-layout-bg-white:					#FFF !default;
 
@@ -210,9 +210,9 @@ $color-input-text: 						$font-color-base !default;
 $color-input-text-focus:				$color-default !default;
 $color-input-text-disabled:				$color-input-text !default;
 $color-input-placeholder-text:			$gray-light !default;
-$color-input-border:					$color-border-default !default;
+$color-input-border:					$gray-darker !default;
 $color-input-border-focus:				$color-primary !default;
-$color-input-border-disabled:			$color-text-black !default;
+$color-input-border-disabled:			$gray-darker !default;
 
 // Input Height
 $input-height:							36px !default;

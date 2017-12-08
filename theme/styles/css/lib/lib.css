@@ -6136,7 +6136,7 @@ h6,
 .profile-phone .mobilePageheader .mx-header-center,
 .profile-tablet .mobilePageheader .mx-header-center {
   margin: 0 auto;
-  padding-top: 7px;
+  padding-top: 0;
   overflow: hidden;
 }
 

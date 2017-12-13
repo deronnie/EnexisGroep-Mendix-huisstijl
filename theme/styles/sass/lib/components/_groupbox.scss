@@ -4,16 +4,15 @@
    Default Mendix Groupboxes
 ========================================================================== */
 .mx-groupbox {
-	background: $color-groupbox-default;
+	
 	> .mx-groupbox-header {
 		@include font(bold);
 		border-radius: 0;
-		margin: 10px ($spacing-number * 2) 0 ($spacing-number * 2);
-		padding: 12px 0 8px 0;
+		margin: 10px 0 0 0;
+		padding: 12px ($spacing-number * 2) ($spacing-number * 2) ($spacing-number * 2);
 		background: $color-groupbox-default;
 		color: $color-groupbox-text-default;
 		font-size: $font-size-base;
-		border-bottom: 5px solid $color-layout-bg-white;
 
 		.mx-groupbox-collapse-icon {
 			margin: -1px ($spacing-number * 2) 0 0;
@@ -155,6 +154,9 @@
 	// white appears as full white	
 	&.groupbox-white {
 		@include groupbox-variant($color-groupbox-text-white, $color-groupbox-white);
+		> .mx-groupbox-body {
+	    	background-color: $color-groupbox-white;
+	  	}
 	}
 	&.groupbox-transparent  {
 		background-color: transparent;

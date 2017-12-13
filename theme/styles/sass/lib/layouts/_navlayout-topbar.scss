@@ -100,7 +100,7 @@
 	    }
 	}
 	.region-topbar {
-		border-bottom: 5px solid $gray;
+		border-bottom: 4px solid $gray;
 
 		/* Reset Layout Grid spacing */
 		.container-fluid {
@@ -117,11 +117,11 @@
 			}
 			ul.nav { 
 				> li.mx-navbar-item > a {
-					padding: ($spacing-number * 2);
+					padding: 9px ($spacing-number * 2) ($spacing-number * 2) ($spacing-number * 2);
 				    line-height: 1.85em;
 				}
 				.dropdown-menu {
-					border: 5px solid $gray;
+					border: 4px solid $gray;
 					border-radius: 0;
 				    -webkit-box-shadow: none;
 				    box-shadow: 		none;
@@ -173,7 +173,7 @@
 		}
 		.toggle-btn {
 			float: left;
-			margin: 5px 0 0 0;
+			margin: 4px 0 0 0;
 			min-width: 38px;
 			width: 38px;
 			height: 38px;
@@ -194,7 +194,7 @@
 }
 .menuHeader {
 	padding: $spacing-number 12px 7px 12px;
-	border-bottom: 5px solid $gray;
+	border-bottom: 4px solid $gray;
 }
 
 .logoMobile {

@@ -92,9 +92,9 @@ $t-default-spacing-bottom:				($spacing-number * 2) !default;
 $t-default-spacing-left:				($spacing-number * 2) !default;
 
 $m-default-spacing-top:					$spacing-number !default;
-$m-default-spacing-right:				$spacing-number !default;
+$m-default-spacing-right:				($spacing-number * 2) !default;
 $m-default-spacing-bottom:				$spacing-number !default;
-$m-default-spacing-left:				$spacing-number !default;
+$m-default-spacing-left:				($spacing-number * 2) !default;
 
 
 //== Typography
@@ -207,7 +207,7 @@ $color-input-bg:						$color-layout-bg-white !default;
 $color-input-bg-focus:					$color-layout-bg-white !default;
 $color-input-bg-disabled:				$color-layout-bg !default;
 $color-input-text: 						$font-color-base !default;
-$color-input-text-focus:				$color-default !default;
+$color-input-text-focus:				#000 !default;
 $color-input-text-disabled:				$color-input-text !default;
 $color-input-placeholder-text:			$gray-light !default;
 $color-input-border:					$gray-darker !default;

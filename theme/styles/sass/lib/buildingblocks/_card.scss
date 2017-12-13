@@ -46,10 +46,10 @@
 .profile-phone,
 .profile-tablet {
 	.card {
-		padding: ($spacing-number * 2) !important;
-		margin-bottom: $spacing-number !important;
+		padding: ($spacing-number * 2)!important;
+		margin-bottom: ($spacing-number * 2) !important;
 		.card {
-			padding: $spacing-number !important;
+			padding: ($spacing-number * 2) !important;
 		}
 	}
 }

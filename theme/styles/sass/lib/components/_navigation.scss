@@ -17,9 +17,8 @@
 			border-radius: 0;
 			padding: ($spacing-number * 2) ($spacing-number * 3);
 			text-decoration: none;
-			margin: 0 ($spacing-number * 2) -5px ($spacing-number * 2);
-			margin-bottom: -5px;
-			border-bottom: 5px solid transparent;
+			margin: 0 ($spacing-number * 2) -4px ($spacing-number * 2);
+			border-bottom: 4px solid transparent;
 			color: $color-navtopbar-text;
 			font-size: $font-navtopbar-size;
 			vertical-align: middle;
@@ -41,12 +40,12 @@
 				background-color: $color-navtopbar-bg-hover;
 				color: $color-navtopbar-text-hover;
 				text-decoration: none;
-				border-bottom: 5px solid $color-primary;
+				border-bottom: 4px solid $color-primary;
 			}
 			&.active {
             	color: $color-navtopbar-text-active !important;
             	background-color: $color-navtopbar-bg-active;
-            	border-bottom: 5px solid $color-default;
+            	border-bottom: 4px solid $color-default;
             }
 
 			/* Dropdown */
@@ -80,7 +79,7 @@
 		> .mx-navbar-item.active a {
 			color: $color-navtopbar-text-active !important;
         	background-color: $color-navtopbar-bg-active;
-        	border-bottom: 5px solid $color-default !important;
+        	border-bottom: 4px solid $color-default !important;
 		}
 		/* When hovering or the dropdown is open */
 		> .mx-navbar-item > a:hover, 
@@ -89,7 +88,7 @@
 			background-color: $color-navtopbar-bg-hover;
 			color: $color-navtopbar-text-hover;
 			text-decoration: none;
-			border-bottom: 5px solid $color-primary !important;
+			border-bottom: 4px solid $color-primary !important;
 
 			.caret {
 				border-top-color: $color-navtopbar-text-hover;
@@ -428,11 +427,12 @@
 		}
 	}
 }
+
 .footerMenu {
 	background: $color-layout-bg-white;
-    margin-top: -($spacing-number * 2) !important;
+    margin-top: -8px !important;
     height: 62px;
-    border-top: 5px solid $gray;
+    border-top: 4px solid $gray;
     margin-bottom: -($spacing-number * 4) !important;
     overflow: hidden;
     padding: ($spacing-number * 2) ($spacing-number * 3) 0 ($spacing-number * 3) !important;
@@ -441,7 +441,7 @@
 		padding: 0 !important;
 		.icon {
 			text-align: center;
-		    padding-top: 6px;
+		    padding-top: 8px;
 			span {
 	            position: absolute;
 			    margin-top: -37px;
@@ -567,8 +567,6 @@
 	.footerMenu {
 		height: 64px;
 		&.Icon {
-		    margin-top: -6px !important;
-		    height: 59px;
 		    .footerItem {
 		    	.mx-link {
 	    		    padding-top: 12px;

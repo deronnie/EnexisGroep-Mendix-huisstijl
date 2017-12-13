@@ -34,6 +34,7 @@
 		}
 		.modal-body {
 			padding: $spacing-number;
+			width: 100%;
 		}
 		.modal-footer {
 			padding: 0;
@@ -139,11 +140,12 @@
 	position: fixed !important;
     width: auto !important;
 	.tooltip-inner {
-		padding: $spacing-number;
+		padding: $spacing-number ($spacing-number * 2);
 		text-align: left;
 	    background-color: $color-default;
 	    max-width: 400px;
 	    width: auto;
+	    font-size: 14px;    
 	}
 }
 

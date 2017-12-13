@@ -100,14 +100,14 @@
 	.dijitCalendarYearLabel {
 		padding-bottom: ($spacing-number / 2);
 	    margin: 0px 16px;
-    	border-top: 5px solid #fff
+    	border-top: 4px solid #fff
 	}
 	.dijitCalendarPreviousYear,
 	.dijitCalendarSelectedYear,
 	.dijitCalendarNextYear {
 		padding: 3px 6px 1px 6px;
 	    margin-top: 7px;
-	    margin-bottom: 5px;
+	    margin-bottom: 4px;
 	}
 	.dijitCalendarMonthContainer {
 		background-color: $color-default;
@@ -182,7 +182,7 @@
 			padding: 10px;
 		}
 		.form-group {
-			margin-bottom: 5px;
+			margin-bottom: 4px;
 		}
 	}
 
@@ -215,7 +215,7 @@
 	}
 	.dijitSplitterH,
 	.dijitGutterH {
-		height: 5px;
+		height: 4px;
 		border: 0;
 		background: #fcfcfc;
 	}

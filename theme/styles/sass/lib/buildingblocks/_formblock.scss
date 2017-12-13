@@ -9,7 +9,7 @@
 }
 .formblock-header {
 	color: $color-default;
-	border-bottom: 5px solid $color-border-white;
+	border-bottom: 4px solid $color-border-white;
 	margin-bottom: ($spacing-number * 2);
 	padding-bottom: ($spacing-number / 2);
 	font-size: $font-size-h5;
@@ -17,10 +17,10 @@
 }
 
 .card .formblock-header {
-	border-bottom: 5px solid $color-border-gray-light;
+	border-bottom: 4px solid $color-border-gray-light;
 }
 .card .card .formblock-header {
-	border-bottom: 5px solid $color-border-white;
+	border-bottom: 4px solid $color-border-white;
 }
 
 .profile-phone,

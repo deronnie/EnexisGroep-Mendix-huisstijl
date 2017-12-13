@@ -3,7 +3,7 @@
 ========================================================================== */
 
 .glyphicon {
-	font-family: FontAwesome;
+	font-family: 'FontAwesome';
     width: auto;
     height: auto;
     text-align: center;
@@ -12,11 +12,9 @@
 }
 
 .mx-groupbox-collapse-icon.glyphicon-plus:before {
-	font-family: FontAwesome;
   	content: "\f078";
 }
 .mx-groupbox-collapse-icon.glyphicon-minus:before {
-	font-family: FontAwesome;
   	content: "\f077";
 }
 .glyphicon-home:before {

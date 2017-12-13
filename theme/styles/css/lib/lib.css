@@ -69,7 +69,7 @@
 
 @media (max-width: 767px) {
   .mx-layoutcontainer .mx-placeholder .mx-layoutgrid {
-    padding: 4px 4px 4px 4px;
+    padding: 4px 8px 4px 8px;
   }
 }
 
@@ -219,7 +219,7 @@ div[tabindex] {
   box-shadow: none;
   display: block;
   padding: 4px;
-  width: calc(100% - 1px);
+  width: 100%;
   height: 36px;
   border: 1px solid #CCCCCC;
   background-color: #FFF;
@@ -235,7 +235,7 @@ div[tabindex] {
   border-color: #D8127D;
   background-color: #FFF;
   outline: 0;
-  color: #222B53;
+  color: #000;
   box-shadow: none;
 }
 
@@ -249,9 +249,25 @@ textarea.form-control, textarea.readonly-input {
   overflow: hidden;
   min-height: 8px;
   padding-top: 5px;
-  padding-bottom: 5px;
-  line-height: 8px;
-  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 20px;
+  margin-bottom: 0 !important;
+}
+
+.form-horizontal .form-control-static, .form-horizontal .form-group div[class*='textBox'] > label, .form-group .form-horizontal div[class*='textBox'] > label, .form-horizontal
+.form-group div[class*='textArea'] > label,
+.form-group .form-horizontal div[class*='textArea'] > label, .form-horizontal
+.form-group div[class*='datePicker'] > label,
+.form-group .form-horizontal div[class*='datePicker'] > label {
+  line-height: 31px;
+}
+
+.form-disabled .form-control-static, .form-disabled .form-group div[class*='textBox'] > label, .form-group .form-disabled div[class*='textBox'] > label, .form-disabled
+.form-group div[class*='textArea'] > label,
+.form-group .form-disabled div[class*='textArea'] > label, .form-disabled
+.form-group div[class*='datePicker'] > label,
+.form-group .form-disabled div[class*='datePicker'] > label {
+  line-height: 28px;
 }
 
 /* Not editable textarea, textarea will be rendered as a label */
@@ -355,7 +371,7 @@ textarea.form-control, textarea.readonly-input {
   border-color: #D8127D;
   background-color: #FFF;
   outline: 0;
-  color: #222B53;
+  color: #000;
   box-shadow: none;
 }
 
@@ -779,7 +795,7 @@ input[type=radio] {
 
 .profile-phone .wgt-BooleanSlider__toggle,
 .profile-tablet .wgt-BooleanSlider__toggle {
-  line-height: 19px;
+  line-height: 32px;
 }
 
 .profile-phone .wgt-BooleanSlider_control.form-control.btn, .profile-phone .wgt-BooleanSlider_control.btn.readonly-input, .profile-phone .form-disabled p.wgt-BooleanSlider_control.btn, .form-disabled .profile-phone p.wgt-BooleanSlider_control.btn,
@@ -941,35 +957,35 @@ ul#noty_topRight_layout_container {
 
 ul#noty_topRight_layout_container li {
   border: 0 !important;
-  background: #ebebeb !important;
+  background: #fff !important;
   box-shadow: none !important;
   width: auto !important;
   border-radius: 0 !important;
-  padding: 8px 16px;
+  padding: 0;
 }
 
 ul#noty_topRight_layout_container .noty_type_success {
-  border: 0;
+  border: 4px solid #008C44 !important;
   padding-left: 50px;
-  background: url(../../../img/succes.gif) 0 0 no-repeat;
+  background: url(../../../img/succes.gif) 16px center no-repeat;
   background-size: 20px;
 }
 
 ul#noty_topRight_layout_container .noty_type_success .noty_message {
-  padding: 0 !important;
+  padding: 16px !important;
   line-height: 13px !important;
   color: #008C44;
 }
 
 ul#noty_topRight_layout_container .noty_type_error {
-  border: 0;
+  border: 4px solid #D4252B !important;
   padding-left: 50px;
-  background: url(../../../img/error.gif) 0 0 no-repeat;
+  background: url(../../../img/error.gif) 16px center no-repeat;
   background-size: 20px;
 }
 
 ul#noty_topRight_layout_container .noty_type_error .noty_message {
-  padding: 0 !important;
+  padding: 16px !important;
   line-height: 13px !important;
   color: #D4252B;
 }
@@ -1196,7 +1212,7 @@ ul#noty_topRight_layout_container .noty_type_error .noty_message {
   text-shadow: none;
   font-size: 14px;
   text-transform: uppercase;
-  line-height: 35px;
+  line-height: 18px;
 }
 
 .btn:hover, .btn.hover, .btn:active, .btn.active,
@@ -1216,6 +1232,10 @@ ul#noty_topRight_layout_container .noty_type_error .noty_message {
 .mx-button:focus {
   background-color: #E0E0E0;
   color: #222B53;
+}
+
+div.btn {
+  line-height: 35px;
 }
 
 .mx-link {
@@ -2099,7 +2119,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 }
 
 .mx-grid .mx-grid-searchbar .mx-grid-search-item .mx-grid-search-input .form-control, .mx-grid .mx-grid-searchbar .mx-grid-search-item .mx-grid-search-input .readonly-input, .mx-grid .mx-grid-searchbar .mx-grid-search-item .mx-grid-search-input .form-disabled p, .form-disabled .mx-grid .mx-grid-searchbar .mx-grid-search-item .mx-grid-search-input p {
-  height: 32px;
+  height: 35px;
   overflow: hidden;
 }
 
@@ -2109,7 +2129,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 }
 
 .mx-grid .mx-grid-searchbar .mx-grid-search-item .mx-grid-search-input .mx-button {
-  height: 32px;
+  height: 35px;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -2120,7 +2140,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
 .mx-grid .mx-grid-searchbar .mx-button {
   background-color: #FFF;
-  height: 39px;
+  height: 35px;
   line-height: 28px;
   margin: 2px;
 }
@@ -2557,7 +2577,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
 .card .card .mx-dataview .mx-dataview-controls,
 .mx-tabcontainer .card .mx-dataview .mx-dataview-controls {
-  border-top: 5px solid #FFF;
+  border-top: 4px solid #FFF;
   background-color: #E0E0E0;
   /* Buttons */
 }
@@ -2689,7 +2709,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 .dijitCalendarContainer .dijitCalendarYearLabel {
   padding-bottom: 2px;
   margin: 0px 16px;
-  border-top: 5px solid #fff;
+  border-top: 4px solid #fff;
 }
 
 .dijitCalendarContainer .dijitCalendarPreviousYear,
@@ -2697,7 +2717,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 .dijitCalendarContainer .dijitCalendarNextYear {
   padding: 3px 6px 1px 6px;
   margin-top: 7px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .dijitCalendarContainer .dijitCalendarMonthContainer {
@@ -2767,7 +2787,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 }
 
 .mx-tooltip .dijitTooltipContainer .form-group {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .mx-tooltip .dijitTooltipConnector {
@@ -2799,7 +2819,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
 .dijitBorderContainer .dijitSplitterH,
 .dijitBorderContainer .dijitGutterH {
-  height: 5px;
+  height: 4px;
   border: 0;
   background: #fcfcfc;
 }
@@ -2942,7 +2962,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
   border-color: #D8127D;
   background-color: #FFF;
   outline: 0;
-  color: #222B53;
+  color: #000;
   box-shadow: none;
 }
 
@@ -2950,7 +2970,7 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
   border-color: #D8127D;
   background-color: #FFF;
   outline: 0;
-  color: #222B53;
+  color: #000;
   box-shadow: none;
 }
 
@@ -2997,20 +3017,15 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
    Default Mendix Groupboxes
 ========================================================================== */
-.mx-groupbox {
-  background: #E0E0E0;
-}
-
 .mx-groupbox > .mx-groupbox-header {
   font-family: Agenda_bold;
   font-weight: normal;
   border-radius: 0;
-  margin: 10px 8px 0 8px;
-  padding: 12px 0 8px 0;
+  margin: 10px 0 0 0;
+  padding: 12px 8px 8px 8px;
   background: #E0E0E0;
   color: #222B53;
   font-size: 18px;
-  border-bottom: 5px solid #FFF;
 }
 
 .mx-groupbox > .mx-groupbox-header .mx-groupbox-collapse-icon {
@@ -3193,6 +3208,10 @@ fieldset[disabled] .mx-fileinput-upload-button.active {
 
 .mx-groupbox.groupbox-white > .mx-groupbox-body {
   border-color: #FFF;
+}
+
+.mx-groupbox.groupbox-white > .mx-groupbox-body {
+  background-color: #FFF;
 }
 
 .mx-groupbox.groupbox-transparent {
@@ -3695,6 +3714,7 @@ img.img-auto,
 
 .modal-dialog .modal-content .modal-body {
   padding: 4px;
+  width: 100%;
 }
 
 .modal-dialog .modal-content .modal-footer {
@@ -3776,7 +3796,7 @@ img.img-auto,
   border-color: #D8127D;
   background-color: #FFF;
   outline: 0;
-  color: #222B53;
+  color: #000;
   box-shadow: none;
 }
 
@@ -3800,11 +3820,12 @@ img.img-auto,
 }
 
 .tooltip .tooltip-inner {
-  padding: 4px;
+  padding: 4px 8px;
   text-align: left;
   background-color: #222B53;
   max-width: 400px;
   width: auto;
+  font-size: 14px;
 }
 
 .profile-phone .modal-dialog .modal-content,
@@ -3836,9 +3857,8 @@ img.img-auto,
   border-radius: 0;
   padding: 8px 12px;
   text-decoration: none;
-  margin: 0 8px -5px 8px;
-  margin-bottom: -5px;
-  border-bottom: 5px solid transparent;
+  margin: 0 8px -4px 8px;
+  border-bottom: 4px solid transparent;
   color: #222B53;
   font-size: 18px;
   vertical-align: middle;
@@ -3862,13 +3882,13 @@ img.img-auto,
   background-color: #FFF;
   color: #D8127D;
   text-decoration: none;
-  border-bottom: 5px solid #D8127D;
+  border-bottom: 4px solid #D8127D;
 }
 
 .mx-navbar ul.nav > li.mx-navbar-item > a.active {
   color: #222B53 !important;
   background-color: #FFF;
-  border-bottom: 5px solid #222B53;
+  border-bottom: 4px solid #222B53;
 }
 
 .mx-navbar ul.nav > li.mx-navbar-item > a .mx-navbar-submenu:before {
@@ -3900,7 +3920,7 @@ img.img-auto,
 .mx-navbar ul.nav > .mx-navbar-item.active a {
   color: #222B53 !important;
   background-color: #FFF;
-  border-bottom: 5px solid #222B53 !important;
+  border-bottom: 4px solid #222B53 !important;
 }
 
 .mx-navbar ul.nav > .mx-navbar-item > a:hover,
@@ -3909,7 +3929,7 @@ img.img-auto,
   background-color: #FFF;
   color: #D8127D;
   text-decoration: none;
-  border-bottom: 5px solid #D8127D !important;
+  border-bottom: 4px solid #D8127D !important;
 }
 
 .mx-navbar ul.nav > .mx-navbar-item > a:hover .caret,
@@ -4240,7 +4260,7 @@ img.img-auto,
   background: #FFF;
   margin-top: -8px !important;
   height: 62px;
-  border-top: 5px solid #E0E0E0;
+  border-top: 4px solid #E0E0E0;
   margin-bottom: -16px !important;
   overflow: hidden;
   padding: 8px 12px 0 12px !important;
@@ -4253,7 +4273,7 @@ img.img-auto,
 
 .footerMenu.SVG .icon {
   text-align: center;
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 .footerMenu.SVG .icon span {
@@ -4386,12 +4406,6 @@ img.img-auto,
   height: 64px;
 }
 
-.profile-phone .footerMenu.Icon,
-.profile-tablet .footerMenu.Icon {
-  margin-top: -6px !important;
-  height: 59px;
-}
-
 .profile-phone .footerMenu.Icon .footerItem .mx-link,
 .profile-tablet .footerMenu.Icon .footerItem .mx-link {
   padding-top: 12px;
@@ -4459,6 +4473,10 @@ img.img-auto,
    Default Mendix Tab Container Widget. Tab containers are used to show information categorized into multiple tab pages. 
    This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen
 ========================================================================== */
+.mx-tabcontainer .nav-tabs > li {
+  margin-bottom: 0;
+}
+
 .mx-tabcontainer .mx-tabcontainer-tabs {
   margin-bottom: 0;
   border-bottom: 0;
@@ -4481,14 +4499,14 @@ img.img-auto,
   text-decoration: none;
   text-transform: uppercase;
   background-color: #E0E0E0;
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   border-radius: 0;
   border-color: #FFF #FFF transparent #FFF;
 }
 
 .mx-tabcontainer .mx-tabcontainer-tabs > li > a:hover {
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   background-color: #D8127D;
   border-color: #D8127D #D8127D transparent #D8127D;
@@ -4503,18 +4521,17 @@ img.img-auto,
 }
 
 .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
-  border-width: 5px 5px 0 5px;
+  border-width: 4px 4px 0 4px;
 }
 
 .mx-tabcontainer .mx-tabcontainer-content {
   background-color: #FFF;
-  border: 5px solid #FFF;
-  margin-top: 1px;
+  border: 4px solid #FFF;
 }
 
 .mx-tabcontainer .formblock-header,
 .mx-tabcontainer .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .mx-tabcontainer .card {
@@ -4523,7 +4540,7 @@ img.img-auto,
 
 .mx-tabcontainer .card .formblock-header,
 .mx-tabcontainer .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .mx-tabcontainer .card .card {
@@ -4532,7 +4549,7 @@ img.img-auto,
 
 .mx-tabcontainer .card .card .formblock-header,
 .mx-tabcontainer .card .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .mx-tabcontainer .card .card .btn-default {
@@ -4578,7 +4595,7 @@ img.img-auto,
 
 .mx-tabcontainer .card .card .card .formblock-header,
 .mx-tabcontainer .card .card .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs > li > a {
@@ -4587,7 +4604,7 @@ img.img-auto,
 }
 
 .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs > li > a:hover {
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   background-color: #D8127D;
   border-color: #D8127D #D8127D transparent #D8127D;
@@ -4602,7 +4619,7 @@ img.img-auto,
 }
 
 .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
-  border-width: 5px 5px 0 5px;
+  border-width: 4px 4px 0 4px;
 }
 
 .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-content {
@@ -4639,7 +4656,7 @@ img.img-auto,
 
 .mx-tabcontainer .mx-tabcontainer .formblock-header,
 .mx-tabcontainer .mx-tabcontainer .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .mx-tabcontainer .mx-tabcontainer .card {
@@ -4648,7 +4665,7 @@ img.img-auto,
 
 .mx-tabcontainer .mx-tabcontainer .card .formblock-header,
 .mx-tabcontainer .mx-tabcontainer .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .mx-tabcontainer .mx-tabcontainer .card .card {
@@ -4657,7 +4674,7 @@ img.img-auto,
 
 .mx-tabcontainer .mx-tabcontainer .card .card .formblock-header,
 .mx-tabcontainer .mx-tabcontainer .card .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .mx-tabcontainer .mx-tabcontainer .card .card .card {
@@ -4666,16 +4683,16 @@ img.img-auto,
 
 .mx-tabcontainer .mx-tabcontainer .card .card .card .formblock-header,
 .mx-tabcontainer .mx-tabcontainer .card .card .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer-tabs > li > a {
-  background-color: #FFF;
+  background-color: #E0E0E0;
   border-color: #E0E0E0 #E0E0E0 transparent #E0E0E0;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer-tabs > li > a:hover {
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   background-color: #D8127D;
   border-color: #D8127D #D8127D transparent #D8127D;
@@ -4684,18 +4701,20 @@ img.img-auto,
 
 .card .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a,
 .card .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:hover {
-  background-color: #E0E0E0;
+  background-color: #FFF;
   border-color: #E0E0E0 #E0E0E0 transparent #E0E0E0;
   color: #222B53;
+  height: 49px;
+  margin-bottom: -4px;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
-  border-width: 5px 5px 0 5px;
+  border-width: 4px 4px 0 4px;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer-content {
   background-color: #FFF;
-  border: 5px solid #E0E0E0;
+  border: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .card {
@@ -4734,7 +4753,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .card .formblock-header,
 .card .mx-tabcontainer .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .card .card {
@@ -4751,7 +4770,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .card .card .formblock-header,
 .card .mx-tabcontainer .card .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .card .mx-tabcontainer .card .card .card {
@@ -4760,12 +4779,12 @@ img.img-auto,
 
 .card .mx-tabcontainer .card .card .card .formblock-header,
 .card .mx-tabcontainer .card .card .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .formblock-header,
 .card .mx-tabcontainer .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs {
@@ -4789,14 +4808,14 @@ img.img-auto,
   text-decoration: none;
   text-transform: uppercase;
   background-color: #E0E0E0;
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   border-radius: 0;
   border-color: #FFF #FFF transparent #FFF;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs > li > a:hover {
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-bottom: 0;
   background-color: #D8127D;
   border-color: #D8127D #D8127D transparent #D8127D;
@@ -4811,7 +4830,7 @@ img.img-auto,
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
-  border-width: 5px 5px 0 5px;
+  border-width: 4px 4px 0 4px;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .mx-tabcontainer-content {
@@ -4861,7 +4880,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .mx-tabcontainer .formblock-header,
 .card .mx-tabcontainer .mx-tabcontainer .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .card {
@@ -4870,7 +4889,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .mx-tabcontainer .card .formblock-header,
 .card .mx-tabcontainer .mx-tabcontainer .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .card .card {
@@ -4879,7 +4898,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .mx-tabcontainer .card .card .formblock-header,
 .card .mx-tabcontainer .mx-tabcontainer .card .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .mx-tabcontainer .mx-tabcontainer .card .card .card {
@@ -4888,7 +4907,7 @@ img.img-auto,
 
 .card .mx-tabcontainer .mx-tabcontainer .card .card .card .formblock-header,
 .card .mx-tabcontainer .mx-tabcontainer .card .card .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 /* ==========================================================================
@@ -4941,27 +4960,28 @@ img.img-auto,
    Default Mendix Tab Container Widget rendered with tabs rendered without background
 ========================================================================== */
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs {
-  border-bottom: 5px solid #E0E0E0;
-  margin-bottom: 5px;
+  border-bottom: 4px solid #E0E0E0;
+  margin-bottom: 4px;
 }
 
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs li {
-  margin-bottom: -5px;
   margin-right: 0;
 }
 
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs li > a {
   padding: 4px 8px;
   border-width: 0;
-  border-bottom-width: 5px;
+  border-bottom-width: 4px;
+  margin-bottom: -4px;
   border-radius: 0;
   color: #222B53;
   background: transparent;
+  height: 49px;
 }
 
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs li > a:hover {
   border-width: 0;
-  border-bottom: 5px solid #D8127D;
+  border-bottom: 4px solid #D8127D;
   background-color: transparent;
   color: #D8127D;
 }
@@ -4969,25 +4989,23 @@ img.img-auto,
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs li.active > a,
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs li.active > a:hover {
   border-width: 0;
-  border-bottom: 5px solid #222B53;
+  border-bottom: 4px solid #222B53;
   background-color: transparent;
   color: #222B53;
 }
 
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs .mx-tabcontainer-content {
   background-color: #FFF;
-  border: 5px solid #FFF;
-  margin-top: 1px;
+  border: 4px solid #FFF;
 }
 
 .tab-lined.mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
-  border-width: 0 0 5px 0;
+  border-width: 0 0 4px 0;
 }
 
 .card .tab-lined.mx-tabcontainer .mx-tabcontainer-content {
   background-color: #FFF;
-  border: 5px solid #FFF;
-  margin-top: 1px;
+  border: 4px solid #FFF;
 }
 
 /* ==========================================================================
@@ -5017,30 +5035,28 @@ img.img-auto,
 
 .profile-tablet .tabMenu,
 .profile-phone .tabMenu {
-  margin-bottom: 0;
+  margin: -8px -16px;
 }
 
 .profile-tablet .tabMenu .mx-tabcontainer-tabs,
 .profile-phone .tabMenu .mx-tabcontainer-tabs {
   margin-bottom: 0;
-  position: fixed;
+  display: flex;
   background: #FFF;
   z-index: 999999;
 }
 
 .profile-tablet .tabMenu .mx-tabcontainer-tabs > li,
 .profile-phone .tabMenu .mx-tabcontainer-tabs > li {
-  display: table-cell;
-  float: none;
   margin: 0;
-  width: 1%;
+  width: 50%;
   text-align: center;
 }
 
 .profile-tablet .tabMenu .mx-tabcontainer-content,
 .profile-phone .tabMenu .mx-tabcontainer-content {
   background: #F4F4F4;
-  padding-top: 48px;
+  padding-top: 0;
 }
 
 /* ==========================================================================
@@ -5684,12 +5700,12 @@ h6,
 .profile-phone .card,
 .profile-tablet .card {
   padding: 8px !important;
-  margin-bottom: 4px !important;
+  margin-bottom: 8px !important;
 }
 
 .profile-phone .card .card,
 .profile-tablet .card .card {
-  padding: 4px !important;
+  padding: 8px !important;
 }
 
 .card-maps {
@@ -5888,7 +5904,7 @@ h6,
 
 .formblock-header {
   color: #222B53;
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
   margin-bottom: 8px;
   padding-bottom: 2px;
   font-size: 18px;
@@ -5896,11 +5912,11 @@ h6,
 }
 
 .card .formblock-header {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .card .formblock-header {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .profile-phone .formblock,
@@ -6129,7 +6145,7 @@ h6,
   display: -webkit-flex;
   display: flex;
   visibility: visible;
-  padding: 4px 32px 0 4px;
+  padding: 2px 32px 0 4px;
   background: #FFF;
 }
 
@@ -6146,6 +6162,8 @@ h6,
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 18px;
+  line-height: 44px;
+  margin-bottom: 0;
 }
 
 .profile-phone .pageheader,
@@ -6169,15 +6187,15 @@ h6,
 ========================================================================== */
 .sectionheader {
   margin-bottom: 8px;
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .card .sectionheader {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .card .card .sectionheader {
-  border-bottom: 5px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 .sectionheader-title {
@@ -6655,7 +6673,7 @@ h6,
 .profile-phone .wizard-progress4 .wizard-progress-step,
 .profile-phone .wizard-progress5 .wizard-progress-step,
 .profile-phone .wizard-progress6 .wizard-progress-step {
-  width: calc(100% - 16px);
+  width: calc(100% - 8px);
   border-bottom: 2px solid #fff;
 }
 
@@ -7652,7 +7670,7 @@ h6,
 }
 
 .navlayout-topbar .region-topbar {
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
   /* Reset Layout Grid spacing */
 }
 
@@ -7675,12 +7693,12 @@ h6,
 }
 
 .navlayout-topbar .region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a {
-  padding: 8px;
+  padding: 9px 8px 8px 8px;
   line-height: 1.85em;
 }
 
 .navlayout-topbar .region-topbar .mx-navbar ul.nav .dropdown-menu {
-  border: 5px solid #E0E0E0;
+  border: 4px solid #E0E0E0;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -7738,7 +7756,7 @@ h6,
 
 .navlayout-topbar .region-topbar .toggle-btn {
   float: left;
-  margin: 5px 0 0 0;
+  margin: 4px 0 0 0;
   min-width: 38px;
   width: 38px;
   height: 38px;
@@ -7760,7 +7778,7 @@ h6,
 
 .menuHeader {
   padding: 4px 12px 7px 12px;
-  border-bottom: 5px solid #E0E0E0;
+  border-bottom: 4px solid #E0E0E0;
 }
 
 .logoMobile {
@@ -7802,7 +7820,7 @@ h6,
 
 .profile-phone p,
 .profile-tablet p {
-  margin: 0 0 4px 0;
+  margin: 0 0 8px 0;
 }
 
 .profile-phone h1, .profile-phone .h1, .profile-phone .h1 > *,

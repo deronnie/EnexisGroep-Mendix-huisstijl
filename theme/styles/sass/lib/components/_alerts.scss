@@ -126,31 +126,31 @@ ul#noty_topRight_layout_container {
 
   li {
     border: 0 !important;
-    background: #ebebeb !important;
+    background: #fff !important;
     box-shadow: none !important;
     width: auto !important;
     border-radius: 0 !important;
-    padding: 8px 16px;
+    padding: 0;
   }
   .noty_type_success {
-    border: 0;
+    border: 4px solid $color-success !important;
     padding-left: 50px;
-    background: url(../../../img/succes.gif) 0 0 no-repeat;
+    background: url(../../../img/succes.gif) 16px center no-repeat;
     background-size: 20px;
     .noty_message {
-      padding: 0 !important;
+      padding: 16px !important;
       line-height: 13px !important;
       color: $color-success;
     }
   }					
 
   .noty_type_error {
-    border: 0;
+    border: 4px solid $color-danger !important;
     padding-left: 50px;
-    background: url(../../../img/error.gif) 0 0 no-repeat;
+    background: url(../../../img/error.gif) 16px center no-repeat;
     background-size: 20px;
     .noty_message {
-      padding: 0 !important;
+      padding: 16px !important;
       line-height: 13px !important;
       color: $color-danger;
     }

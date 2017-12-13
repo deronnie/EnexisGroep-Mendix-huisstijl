@@ -22,7 +22,7 @@
 		display: -webkit-flex;
 		display:         flex;
 		visibility: visible;
-		padding: $spacing-number 32px 0 $spacing-number;
+		padding: ($spacing-number / 2) 32px 0 $spacing-number;
 		background: $color-layout-bg-white;
 		.mx-header-center {
 			margin: 0 auto;
@@ -33,7 +33,9 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			font-size: 18px
+			font-size: 18px;
+			line-height: 44px;
+			margin-bottom:0;
 		}
 	}
 	.pageheader {
